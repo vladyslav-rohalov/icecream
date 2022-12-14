@@ -37,11 +37,11 @@ body {
   background-size: cover;
   background-position: center;
 
-  // @media (min-device-pixel-ratio: 2),
-  //   (min-resolution: 192dpi),
-  //   (min-resolution: 2dppx) {
-  //   background-image: url('../../images/general/mobile-bg@2x.jpg');
-  // }
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url('/src/images/general/mobile-bg@2x.jpg');
+  }
 
   // @media screen and (min-width: 768px) {
   //   background-image: url('../../images/general/tablet-bg.jpg');
