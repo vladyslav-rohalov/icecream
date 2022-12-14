@@ -1,0 +1,71 @@
+body {
+  font-family: $primary-font;
+  font-size: 14px;
+  color: #131313;
+  line-height: 1.25;
+  letter-spacing: 0.04; 
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+p {
+  margin: 0;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.list {
+  padding: 0;
+  list-style: none;
+}
+
+.link {
+  padding: 0;
+  font-style: normal;
+  text-decoration: none;
+
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  @media screen and (min-width:$mobile) {
+    width: 440px;
+  }
+
+  @media screen and (min-width:$tablet) {
+    width: 704px;
+  }
+
+  @media screen and (min-width:$desktop) {
+    width: 1168px;
+  }
+}
+.section {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 60px 0;
+}
+
+// @media screen and (min-width: $tablet) {
+//   .section {
+//     padding: ;
+//   }
+// }
+
+// @media screen and (min-width: $desktop) {
+//   .section {
+//     padding: ;
+//   }
+// }
