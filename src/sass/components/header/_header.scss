@@ -2,12 +2,17 @@
     display: flex;
     background-color: $solid-bg-color;
     align-items: center;
+    padding-top: 12px;
+
+    @include tablet {
+        padding-top: 20px;
+    }
 }
 
 .header_nav {
     display: none;
 
-        @media screen and (min-width: 1200px) {
+    @include desktop {
         display: flex;
         margin-left: 368px;
     }
@@ -30,8 +35,12 @@
 .header_bt {
     display: none;
 
-    @media screen and (min-width: 768px) {
-        display: inline-block;
+    @include tablet {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 4px;
         margin-left: auto;
         min-width: 152px;
         height: 42px;
@@ -59,8 +68,21 @@
             background-color: $btn-disabled-color;
             color: $primary-font-color;
         }
-    }
 
+        &::after {
+            position: absolute;
+            content: '';
+            top: 0;
+            right: 0;
+            transform: translate(-120%, 50%);
+            width: 24px;
+            height: 24px;
+            background-image: url(../images/icons.svg#icon-arrow-short);
+            background-size: contain;
+            background-repeat: no-repeat;
+            margin-left: 10px;
+        }
+    }
     }
 
 .logo {
