@@ -31,6 +31,7 @@
     display: none;
 
     @media screen and (min-width: 768px) {
+        position: relative;
         display: inline-block;
         margin-left: auto;
         min-width: 152px;
@@ -59,9 +60,36 @@
             background-color: $btn-disabled-color;
             color: $primary-font-color;
         }
+
+        &::after {
+            position: absolute;
+            content: '';
+            top: 0;
+            right: 0;
+            transform: translate(-120%, 50%);
+            width: 24px;
+            height: 24px;
+            background-image: url(../images/icons.svg#icon-arrow-short);
+            background-size: contain;
+            background-repeat: no-repeat;
+            margin-left: 10px;
+        }
     }
 
+    
     }
+
+.icon_arrow {
+        position: absolute;
+        content: '';
+        transform: translate(-70%, 30%);
+        width: 12px;
+        height: 12px;
+        background-image: url(../images/icons.svg#icon-arrow-short);
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin-left: 10px;
+}
 
 .logo {
     width: 60px;
