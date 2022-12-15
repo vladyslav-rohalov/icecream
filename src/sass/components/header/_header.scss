@@ -13,16 +13,18 @@
     }
 }
 
-.header_list {
-    font-weight: 700;
-    font-size: 16px;
-
-color: #FCFCFC;
-    color: $secondary-font-color;
-    
+.nav_list {
     &:not(:last-child) {
         margin-right: 28px;
     }
+}
+
+.nav_link {
+    font-weight: 700;
+    font-size: 16px;
+
+    color: #FCFCFC;
+    color: $secondary-font-color;
 }
 
 .header_bt {
