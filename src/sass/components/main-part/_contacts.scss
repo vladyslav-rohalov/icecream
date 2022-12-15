@@ -3,7 +3,8 @@
 }
 
 .contacts__thumb {
-  display: block;
+  display: flex;
+  flex-direction: column;
   margin-top: 0;
   margin-bottom: 40px;
   padding-left: 32px;
@@ -14,6 +15,9 @@
 }
 
 .contacts__name {
+  display: block;
+  width: 80px;
+  margin-top: 40px;
   margin-bottom: 20px;
   padding: 4px 22px;
   font-size: 12px;
@@ -25,17 +29,64 @@
   border-radius: 4px;
 }
 
-.contacts__one {
-  border-bottom: 1px solid #e1e1e1;
+.max {
+  width: 130px;
 }
+
+.contacts__item {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #e1e1e1;
+  &:last-child {
+    display: flex;
+    flex-direction: column;
+    border-bottom: none;
+  }
+}
+
 .contacts__town {
   margin-bottom: 8px;
 }
 
 .contacts__adress {
   margin-bottom: 24px;
+  font-size: 12px;
+  line-height: calc(22px / 12px);
+  letter-spacing: 0.04em;
+
+  color: #d6936d;
 }
 
-.contacts__two {
-  border-bottom: 1px solid #e1e1e1;
+.work_day {
+  margin-bottom: 8px;
+}
+
+.exit_day {
+  margin-bottom: 24px;
+}
+
+.contacts__tel {
+  margin-bottom: 6px;
+}
+
+.contacts__buttons {
+  display: flex;
+  flex-direction: column;
+}
+
+.btn-location {
+  display: flex;
+  padding: 12px 40px;
+  background-color: #f8d24e;
+  border-radius: 10px;
+}
+
+.btn-franchise {
+  display: flex;
+  padding: 12px 40px;
+  background-color: transparent;
+  border-radius: 10px;
+}
+.btn-svg {
+  width: 5px;
+  height: 10px;
 }
