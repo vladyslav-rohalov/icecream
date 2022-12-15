@@ -38,7 +38,7 @@
   width: 100vw;
   height: 100vh;
   padding: 32px;
-  background-color: #3f51b5;
+  background-color: $card-bg-color1;
   z-index: 999;
 
   transform: translateX(100%);
@@ -57,9 +57,17 @@
 }
 
 .mobile-menu {
+  display: block;
+  text-align: center;
+
   padding: 0;
   margin: 0;
-  list-style: none;
+  margin-top: 140px;
+  
+}
+
+.mobile_list {
+  margin-bottom: 40px;
 }
 
 .mobile-menu .link {
@@ -67,4 +75,13 @@
   padding: 10px;
   color: #fff;
   text-decoration: none;
+}
+
+.mobile_link {
+  font-weight: 700;
+  font-size: 32px;
+
+  @media (min-width: 768px) {
+  font-size: 48px;
+  }
 }
