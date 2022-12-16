@@ -1,0 +1,271 @@
+.products {
+  text-align: center;
+}
+
+.products__desc {
+  color: $primary-font-color;
+
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 1.22;
+  text-transform: uppercase;
+
+  @include tablet {
+    font-size: 22px;
+  }
+
+  @include desktop {
+    font-size: 30px;
+  }
+}
+
+.products__title {
+  margin-top: 12px;
+
+  color: $primary-font-color;
+
+  font-family: $secondary-font;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 1.26;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+
+  @include tablet {
+    font-size: 34px;
+  }
+
+  @include desktop {
+    font-size: 36px;
+  }
+}
+
+.products__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 168px;
+
+  margin-top: 148px;
+
+  @include tablet {
+    gap: 16px;
+    margin-top: 200px;
+  }
+
+  @include desktop {
+    gap: 16px;
+    margin-top: 303px;
+  }
+}
+
+.products_item {
+  position: relative;
+
+  padding-top: 123px;
+  padding-right: 40px;
+  padding-left: 40px;
+
+  width: 280px;
+  height: 420px;
+
+  @include tablet {
+    padding-top: 108px;
+    padding-right: 26px;
+    padding-left: 26px;
+
+    width: 224px;
+    height: 428px;
+  }
+
+  @include desktop {
+    padding-top: 165px;
+    padding-right: 64px;
+    padding-left: 64px;
+
+    width: 370px;
+    height: 536px;
+  }
+
+  border-radius: 24px;
+
+  &:nth-child(1) {
+    background-color: $card-bg-color1;
+  }
+
+  &:nth-child(2) {
+    background-color: $card-bg-color2;
+  }
+
+  &:nth-child(3) {
+    background-color: $card-bg-color3;
+  }
+
+  //  ============== images shadow  ==============
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -46%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+
+    display: block;
+
+    width: 200px;
+    height: 200px;
+
+    @include tablet {
+      top: -48%;
+    }
+
+    @include desktop {
+      top: -59%;
+
+      width: 302px;
+      height: 302px;
+    }
+
+    border-radius: 50%;
+  }
+
+  &:nth-child(1)::before {
+    box-shadow: 0px 5.34219px 20.0332px rgba(10, 136, 23, 0.25);
+  }
+
+  &:nth-child(2)::before {
+    box-shadow: 0px 5.40397px 20.2649px rgba(153, 114, 23, 0.25);
+  }
+
+  &:nth-child(3)::before {
+    box-shadow: 0px 5.41333px 20.3px rgba(0, 0, 0, 0.25);
+  }
+
+  //  ============== images  ==============
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: -49%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+
+    display: block;
+
+    width: 200px;
+    height: 200px;
+
+    @include tablet {
+      top: -51%;
+    }
+
+    @include desktop {
+      top: -62%;
+
+      width: 302px;
+      height: 302px;
+    }
+
+    background-position: center;
+    background-size: contain;
+
+    border-radius: 50%;
+  }
+
+  &:nth-child(1)::after {
+    background-image: url(../images/products/ice-cream_1x.jpg);
+
+    @include retina2x {
+      background-image: url(../images/products/ice-cream_2x.jpg);
+    }
+
+    @include desktop {
+      background-image: url(../images/products/desktop_ice-cream_1x.jpg);
+
+      @include retina2x {
+        background-image: url(../images/products/desktop_ice-cream_2x.jpg);
+      }
+    }
+  }
+
+  &:nth-child(2)::after {
+    background-image: url(../images/products/ice-coffee_1x.jpg);
+
+    @include retina2x {
+      background-image: url(../images/products/ice-coffee_2x.jpg);
+    }
+
+    @include desktop {
+      background-image: url(../images/products/desktop_ice-coffee_1x.jpg);
+
+      @include retina2x {
+        background-image: url(../images/products/desktop_ice-coffee_2x.jpg);
+      }
+    }
+  }
+
+  &:nth-child(3)::after {
+    background-image: url(../images/products/milkshakes_1x.jpg);
+
+    @include retina2x {
+      background-image: url(../images/products/milkshakes_2x.jpg);
+    }
+    @include desktop {
+      background-image: url(../images/products/desktop_milkshakes_1x.jpg);
+
+      @include retina2x {
+        background-image: url(../images/products/desktop_milkshakes_2x.jpg);
+      }
+    }
+  }
+}
+
+.products__name {
+  padding-bottom: 40px;
+
+  color: $primary-font-color;
+
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+
+  @include tablet {
+    font-size: 22px;
+  }
+
+  @include desktop {
+    font-size: 30px;
+  }
+}
+
+.products_text {
+  color: $primary-font-color;
+
+  font-size: 14px;
+  line-height: 1.79;
+  letter-spacing: 0.04em;
+
+  @include desktop {
+    font-size: 16px;
+  }
+}
+
+.products_btn {
+  position: absolute;
+  left: 50%;
+  bottom: 16px;
+  transform: translatex(-50%);
+
+  background-color: transparent;
+  border: none;
+
+  @include tablet {
+    bottom: 12px;
+  }
+
+  @include desktop {
+    bottom: 60px;
+  }
+}
