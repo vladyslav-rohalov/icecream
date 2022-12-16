@@ -27,9 +27,9 @@ a {
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: $primary-font;
   font-size: 14px;
-  color: #131313;
+  color: $primary-font-color;
   line-height: 1.25;
   letter-spacing: 0.04;
 
@@ -65,21 +65,24 @@ body {
 }
 
 .container {
+  min-width: 320px;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
 
-  // @media screen and (min-width: $mobile) {
-  //   width: 440px;
-  // }
+  @include mobile {
+    width: 480px;
+    padding: 0 20px;
+  }
 
-  // @media screen and (min-width: $tablet) {
-  //   width: 704px;
-  // }
+  @include tablet {
+    width: 768px;
+    padding: 0 32px;
+  }
 
-  // @media screen and (min-width: $desktop) {
-  //   width: 1168px;
-  // }
+  @include desktop {
+    width: 1200px;
+    padding: 16px;
+  }
 }
 .section {
   max-width: 1600px;
@@ -87,14 +90,3 @@ body {
   padding: 60px 0;
 }
 
-// @media screen and (min-width: $tablet) {
-//   .section {
-//     padding: ;
-//   }
-// }
-
-// @media screen and (min-width: $desktop) {
-//   .section {
-//     padding: ;
-//   }
-// }
