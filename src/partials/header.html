@@ -1,5 +1,17 @@
 <header class="header container">
-        <img class="logo" src="./images/header/logo/l_60.png" alt="logo">
+        <picture>
+          <img 
+          srcset="
+          ./images/header/logo/s_40.png 40w, 
+          ./images/header/logo/m_48.png 48w, 
+          ./images/header/logo/l_60.png 60w
+          "
+          sizes=" (min-width: 1200px) 60px, (min-width: 768px) 48px, (min-width: 320px) 40px,"
+          src="./images/header/logo/l_60.png" 
+          alt="logo"
+          >
+      </picture>
+        <!-- <img class="logo" src="./images/header/logo/l_60.png" alt="logo"> -->
         <nav>
           <ul class="header_nav">
             <li class="nav_list"><a class="nav_link" href="">Home</a></li>
