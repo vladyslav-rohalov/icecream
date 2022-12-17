@@ -103,3 +103,75 @@ document.addEventListener('DOMContentLoaded', function () {
     this.classList.remove('active');
   });
 }); // end ready
+
+// Numbers animation
+
+refs = {
+  animationEl: document.querySelector('.animation'),
+  numberPossFirst: document.querySelector('[data-number="1"]'),
+  numberPossSecond: document.querySelector('[data-number="2"]'),
+  numberPossThird: document.querySelector('[data-number="3"]'),
+};
+
+const animationElHeight = refs.animationEl.offsetHeight;
+const animationElOffest = offset(refs.animationEl).top;
+
+console.log(`Высота элемента - ${animationElHeight}`);
+console.log(`Высота верха до елемента - ${animationElOffest}`);
+console.log(`Высота окна браузера - ${window.innerHeight}`);
+
+function offset(el) {
+  const rect = el.getBoundingClientRect(),
+    scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+    scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  return { top: rect.top + scrollTop, left: rect.left + scrollLeft };
+}
+
+window.addEventListener('scroll', onScrollMouse);
+
+function onScrollMouse(e) {
+  console.log(`Проскролил px - ${scrollY}`);
+  if (scrollY < animationElOffest - window.innerHeight + animationElHeight) {
+    return;
+  }
+  refs.animationEl.classList.add('isActive');
+  changeNumberFirst();
+  changeNumberSecond();
+  changeNumberThird();
+  removeEventListener('scroll', onScrollMouse);
+}
+
+function changeNumberFirst() {
+  let counter = 0;
+  const timerId = setInterval(() => {
+    if (counter === 721) {
+      clearInterval(timerId);
+    }
+    refs.numberPossFirst.textContent = counter;
+    counter += 7;
+  }, foo());
+}
+function foo() {
+  return 50;
+}
+function changeNumberSecond() {
+  let counterSecond = 0;
+  const timerId = setInterval(() => {
+    if (counterSecond === 16) {
+      clearInterval(timerId);
+    }
+    refs.numberPossSecond.textContent = counterSecond;
+    counterSecond += 1;
+  }, 300);
+}
+
+function changeNumberThird() {
+  let counterThird = 0;
+  const timerId = setInterval(() => {
+    if (counterThird === 84) {
+      clearInterval(timerId);
+    }
+    refs.numberPossThird.textContent = counterThird;
+    counterThird += 1;
+  }, 60);
+}
