@@ -1,0 +1,48 @@
+.hero {
+    width: 1600px;
+    background-color: $solid-bg-color;
+}
+
+.hero__main--title {
+    width: 367px;
+
+    font-family: $secondary-font;
+    font-weight: 400;
+    font-size: 38px;
+    line-height: calc(48 / 38);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    
+    color: $secondary-font-color;
+}
+
+.hero__left--side {
+    display: flex;
+    gap: 12px;
+}
+
+.heroo__right--side {
+    margin-left: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.hero__iteam--number {
+    font-family: $primary-font;
+    font-weight: 900;
+    font-size: 46px;
+    line-height: calc(56 / 46);
+    text-align: right;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: $primary-font-color;
+}
+
+.hero__iteam--text {
+    font-family: $primary-font;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: calc(17 / 14);
+    text-align: right;
+    color: $secondary-font-color;
+}
