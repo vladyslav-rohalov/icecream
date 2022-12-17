@@ -13,13 +13,13 @@
     }
 }
 
-.nav_list {
+.header_nav-list {
     &:not(:last-child) {
         margin-right: 28px;
     }
 }
 
-.nav_link {
+.header_nav-link {
     font-weight: 700;
     font-size: 16px;
 
