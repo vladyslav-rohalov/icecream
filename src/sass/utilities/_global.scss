@@ -67,11 +67,11 @@ body {
 .container {
   min-width: 320px;
   max-width: 1200px;
+  padding: 0 20px;
   margin: 0 auto;
 
   @include mobile {
     max-width: 480px;
-    padding: 0 20px;
   }
 
   @include tablet {
@@ -81,11 +81,11 @@ body {
 
   @include desktop {
     max-width: 1200px;
-    padding: 16px;
+    padding: 0 16px;
   }
 }
 .section {
-  max-width: 1600px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 60px 0;
 }
