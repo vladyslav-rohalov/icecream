@@ -316,6 +316,7 @@
   height: 199px;
   border-radius: 10px;
   @include tablet {
+    margin-bottom: 32px;
     width: 448px;
     height: 260px;
   }
@@ -332,6 +333,7 @@
   border-radius: 10px;
   border-color: transparent;
   @include tablet {
+    margin-bottom: 32px;
     font-size: 14px;
     line-height: calc(17px / 14px);
   }
