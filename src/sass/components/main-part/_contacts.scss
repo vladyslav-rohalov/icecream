@@ -102,9 +102,11 @@
   margin-left: auto;
   margin-right: auto;
   justify-content: center;
+  align-items: center;
   width: 196px;
   margin-bottom: 16px;
-  padding: 12px 40px;
+  padding-top: 12px;
+  padding-bottom: 12px;
 
   font-weight: 600;
   font-size: 14px;
@@ -120,8 +122,10 @@
   margin-left: auto;
   margin-right: auto;
   justify-content: center;
+  align-items: center;
   width: 196px;
-  padding: 12px 40px;
+  padding-top: 12px;
+  padding-bottom: 12px;
 
   font-weight: 600;
   font-size: 14px;
@@ -132,6 +136,7 @@
   border: 2px solid #f8d24e;
 }
 .btn-svg {
-  width: 5px;
-  height: 10px;
+  margin-left: 7px;
+  width: 12px;
+  height: 12px;
 }
