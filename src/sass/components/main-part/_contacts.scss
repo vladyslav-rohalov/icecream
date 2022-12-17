@@ -1,7 +1,8 @@
 .contacts__parts {
-  display: flex;
+  display: block;
   margin-bottom: 20px;
   @include tablet {
+    display: flex;
     margin-bottom: 40px;
   }
   @include desktop {
@@ -263,6 +264,31 @@
   height: 12px;
 }
 
+.modal-locations {
+  width: 280px;
+  height: 365px;
+  @include tablet {
+    width: 568px;
+    height: 458px;
+  }
+}
+
+.modal-franchise {
+  width: 280px;
+  height: 674px;
+  @include tablet {
+    width: 568px;
+    height: 668px;
+  }
+}
+
+.modal__cross {
+  width: 20px;
+  height: 20px;
+  right: 12px;
+  top: 12px;
+}
+
 .modal__title {
   margin-bottom: 20px;
   font-family: 'Seymour One';
@@ -273,6 +299,9 @@
   text-align: center;
   color: #131313;
   @include tablet {
+    margin-right: auto;
+    margin-left: auto;
+    width: 322px;
     margin-bottom: 32px;
     font-size: 20px;
     line-height: calc(28px / 20px);
@@ -314,6 +343,7 @@
   line-height: calc(20px / 14px);
 
   @include tablet {
+    margin-bottom: 32px;
     font-size: 16px;
     line-height: calc(22px / 16px);
   }
@@ -336,6 +366,7 @@
   line-height: calc(17px / 12px);
   @include tablet {
     width: 368px;
+    margin-bottom: 16px;
     font-size: 14px;
     line-height: calc(20px / 14px);
   }
@@ -355,6 +386,7 @@
   resize: none;
   @include tablet {
     width: 368px;
+    margin-bottom: 32px;
     font-size: 14px;
     line-height: calc(20px / 14px);
   }
