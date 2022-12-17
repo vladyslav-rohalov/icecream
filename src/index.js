@@ -1,4 +1,7 @@
+//Throttle
 //Swiper
+//-------------------------------------------------------------------------------------
+
 import Swiper, { Pagination, Keyboard, Autoplay } from 'swiper';
 import '../node_modules/swiper/swiper.scss';
 import '../node_modules/swiper/modules/pagination/pagination.scss';
@@ -19,6 +22,8 @@ const swiper = new Swiper('.swiper', {
 });
 
 //Modal window
+//-------------------------------------------------------------------------------------
+
 !(function (e) {
   'function' != typeof e.matches &&
     (e.matches =
@@ -105,6 +110,10 @@ document.addEventListener('DOMContentLoaded', function () {
 }); // end ready
 
 // Numbers animation
+<<<<<<< Updated upstream
+=======
+//-------------------------------------------------------------------------------------
+>>>>>>> Stashed changes
 
 refs = {
   animationEl: document.querySelector('.animation'),
@@ -119,19 +128,41 @@ const animationElOffest = offset(refs.animationEl).top;
 console.log(`Высота элемента - ${animationElHeight}`);
 console.log(`Высота верха до елемента - ${animationElOffest}`);
 console.log(`Высота окна браузера - ${window.innerHeight}`);
+<<<<<<< Updated upstream
 
 function offset(el) {
   const rect = el.getBoundingClientRect(),
     scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
     scrollTop = window.pageYOffset || document.documentElement.scrollTop;
   return { top: rect.top + scrollTop, left: rect.left + scrollLeft };
+=======
+console.log(
+  `Отсчет подйет когда будет цифра ${
+    animationElOffest - window.innerHeight + animationElHeight - 1
+  }`
+);
+
+function offset(el) {
+  const rect = el.getBoundingClientRect(),
+    scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  return { top: rect.top + scrollTop };
+>>>>>>> Stashed changes
 }
 
 window.addEventListener('scroll', onScrollMouse);
 
+<<<<<<< Updated upstream
 function onScrollMouse(e) {
   console.log(`Проскролил px - ${scrollY}`);
   if (scrollY < animationElOffest - window.innerHeight + animationElHeight) {
+=======
+function onScrollMouse() {
+  console.log(`Проскролил px - ${scrollY}`);
+  if (
+    scrollY <
+    animationElOffest - window.innerHeight + animationElHeight - 1
+  ) {
+>>>>>>> Stashed changes
     return;
   }
   refs.animationEl.classList.add('isActive');
@@ -149,11 +180,17 @@ function changeNumberFirst() {
     }
     refs.numberPossFirst.textContent = counter;
     counter += 7;
+<<<<<<< Updated upstream
   }, foo());
 }
 function foo() {
   return 50;
 }
+=======
+  }, 50);
+}
+
+>>>>>>> Stashed changes
 function changeNumberSecond() {
   let counterSecond = 0;
   const timerId = setInterval(() => {
