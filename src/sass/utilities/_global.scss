@@ -1,11 +1,3 @@
-body {
-  font-family: $primary-font;
-  font-size: 14px;
-  color: #131313;
-  line-height: 1.25;
-  letter-spacing: 0.04; 
-}
-
 h1,
 h2,
 h3,
@@ -23,33 +15,73 @@ img {
   height: auto;
 }
 
-.list {
+ul {
   padding: 0;
   list-style: none;
 }
 
-.link {
+a {
   padding: 0;
   font-style: normal;
   text-decoration: none;
+}
 
+body {
+  font-family: $primary-font;
+  font-size: 14px;
+  color: $primary-font-color;
+  line-height: 1.25;
+  letter-spacing: 0.04;
+
+  background-image: url('/src/images/general/mobile-bg.jpg');
+  background-size: cover;
+  background-position: center;
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url('/src/images/general/mobile-bg@2x.jpg');
+  }
+
+  @media screen and (min-width: 768px) {
+    background-image: url('/src/images/general/tablet-bg.jpg');
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url('/src/images/general/tablet-bg@2x.jpg');
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    background-image: url('/src/images/general/desktop-bg.jpg');
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url('/src/images/general/desktop-bg@2x.jpg');
+    }
+  }
 }
 
 .container {
+  min-width: 320px;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
 
-  @media screen and (min-width:$mobile) {
-    width: 440px;
+  @include mobile {
+    max-width: 480px;
+    padding: 0 20px;
   }
 
-  @media screen and (min-width:$tablet) {
-    width: 704px;
+  @include tablet {
+    max-width: 768px;
+    padding: 0 32px;
   }
 
-  @media screen and (min-width:$desktop) {
-    width: 1168px;
+  @include desktop {
+    max-width: 1200px;
+    padding: 16px;
   }
 }
 .section {
@@ -58,14 +90,3 @@ img {
   padding: 60px 0;
 }
 
-// @media screen and (min-width: $tablet) {
-//   .section {
-//     padding: ;
-//   }
-// }
-
-// @media screen and (min-width: $desktop) {
-//   .section {
-//     padding: ;
-//   }
-// }
