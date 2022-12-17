@@ -67,13 +67,17 @@
   }
 }
 
+// CSS відгуків покупців!!!!
+
 .container--top-margin {
   margin-top: 80px;
+  justify-content: center;
 }
-.rewiew {
+.review {
   margin: 0 auto;
   // outline: 2px solid tomato;
-
+  // padding-left: 20px;
+  // padding-right: 20px;
   @media screen and (min-width: 480px) {
     width: 440px;
   }
@@ -86,7 +90,7 @@
     padding-right: 100px;
   }
 }
-.rewiew__item {
+.review__item {
   text-align: center;
   // margin-bottom: 3px;
 
@@ -99,10 +103,11 @@
     margin: 0 auto;
     width: 85px;
     height: 85px;
+
     border-radius: 50%;
   }
 }
-.rewiew__text-container {
+.review__text-container {
   margin: 0 auto;
   margin-top: 32px;
   margin-bottom: 32px;
@@ -121,7 +126,7 @@
     width: 968px;
   }
 }
-.rewiew__text {
+.review__text {
   margin: 0;
   padding: 0;
   padding: 35px 39px;
@@ -143,7 +148,7 @@
     font-size: 16px;
   }
 }
-.rewiew__title {
+.review__title {
   margin: 0;
   padding: 0;
 
