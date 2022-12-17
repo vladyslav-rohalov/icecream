@@ -2,17 +2,20 @@
     display: flex;
     background-color: $solid-bg-color;
     align-items: center;
+
     padding-top: 12px;
 
     @include tablet {
         padding-top: 20px;
     }
+
 }
 
 .header_nav {
     display: none;
 
     @include desktop {
+
         display: flex;
         margin-left: 368px;
     }
@@ -41,6 +44,7 @@
         align-items: center;
         justify-content: center;
         gap: 4px;
+        position: relative;
         margin-left: auto;
         min-width: 152px;
         height: 42px;
@@ -83,9 +87,7 @@
             margin-left: 10px;
         }
     }
-    }
 
 .logo {
     width: 60px;
 }
-
