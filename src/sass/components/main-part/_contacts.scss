@@ -2,6 +2,14 @@
   display: none;
 }
 
+.contacts__parts {
+  @include mobile {
+    display: block;
+  }
+  @include tablet {
+    display: flex;
+  }
+}
 .contacts__thumb {
   display: flex;
   flex-direction: column;
@@ -14,6 +22,12 @@
   border-radius: 24px;
   &:last-child {
     margin-bottom: 20px;
+  }
+  @include tablet {
+    width: 224px;
+  }
+  @include desktop {
+    width: 368px;
   }
 }
 

@@ -2,14 +2,9 @@
   <!-- МОДАЛЬНОЕ ОКНО -->
   <!-- CSS стили модалки лежат в _modal.scss -->
   <!-- Кнопка для модалки. Добавь свой класс CSS и поменяй название для data-modal -->
-  <button class="contacts-open js-open-modal" data-modal="openModalContacts">
-    Our Locations
-  </button>
-  <button class="franchise-open js-open-modal" data-modal="openModalFranchise">
-    Franchise
-  </button>
+
   <!-- Контйнер для модалки. Добавь стили CSS, поменяй название для data-modal на идентичное как у кнопки-->
-  <div class="modal modal-locations" data-modal="openModalContacts">
+  <div class="modal modal-locations" data-modal="openModalLocation">
     <svg class="modal__cross js-modal-close">
       <use class="" href="./images/icons.svg#icon-close-modal20"></use>
     </svg>
@@ -85,7 +80,7 @@
         placeholder="Comment"
       ></textarea>
     </div>
-    <button type="button" class="modal__btn">Open map</button>
+    <button type="button" class="modal__btn">Submit</button>
   </div>
   <!-- Конец модалок -->
 
