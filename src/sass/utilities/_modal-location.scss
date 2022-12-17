@@ -1,8 +1,3 @@
-.modal-locations {
-  width: 280px;
-  height: 365px;
-}
-
 .modal__title {
   margin-bottom: 20px;
   font-family: 'Seymour One';
@@ -12,6 +7,11 @@
   line-height: calc(24px / 16px);
   text-align: center;
   color: #131313;
+  @include tablet {
+    margin-bottom: 32px;
+    font-size: 20px;
+    line-height: calc(28px / 20px);
+  }
 }
 
 .modal__map {
@@ -21,6 +21,10 @@
   width: 224px;
   height: 199px;
   border-radius: 10px;
+  @include tablet {
+    width: 448px;
+    height: 260px;
+  }
 }
 
 .modal__btn {
@@ -33,4 +37,8 @@
   background-color: #f8d24e;
   border-radius: 10px;
   border-color: transparent;
+  @include tablet {
+    font-size: 14px;
+    line-height: calc(17px / 14px);
+  }
 }

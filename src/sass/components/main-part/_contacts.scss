@@ -3,13 +3,16 @@
 }
 
 .contacts__parts {
-  @include mobile {
-    display: block;
-  }
+  display: flex;
+  margin-bottom: 20px;
   @include tablet {
-    display: flex;
+    margin-bottom: 40px;
+  }
+  @include desktop {
+    margin-bottom: 60px;
   }
 }
+
 .contacts__thumb {
   display: flex;
   flex-direction: column;
@@ -25,15 +28,26 @@
   }
   @include tablet {
     width: 224px;
+    margin-right: 16px;
+    margin-bottom: 0px;
+    &:last-child {
+      margin-right: 0px;
+      margin-bottom: 0px;
+    }
   }
+
   @include desktop {
     width: 368px;
+    margin-right: 32px;
+    &:last-child {
+      margin-right: 0px;
+    }
   }
 }
 
 .contacts__name {
   display: block;
-  width: 80px;
+  width: max-content;
   margin-top: 40px;
   margin-bottom: 20px;
   padding: 4px 22px;
@@ -44,71 +58,161 @@
   color: #131313;
   background-color: #f8d24e;
   border-radius: 4px;
+  @include tablet {
+    margin-bottom: 36px;
+    padding: 4px 13px;
+    font-size: 16px;
+    line-height: calc(22px / 16px);
+  }
+  @include desktop {
+    padding: 4px 14px;
+    font-size: 16px;
+    line-height: calc(30px / 16px);
+  }
 }
 
 .max {
-  width: 130px;
+  @include tablet {
+    padding: 4px 10px;
+  }
 }
-
 .contacts__item {
   margin-bottom: 24px;
   border-bottom: 1px solid #e1e1e1;
   &:last-child {
-    display: flex;
-    flex-direction: column;
-    border-bottom: none;
+    border-color: transparent;
+  }
+  @include tablet {
+    margin-bottom: 32px;
+    &:last-child {
+      margin-bottom: 40px;
+    }
   }
 }
 
 .contacts__town {
   margin-bottom: 8px;
+  font-size: 12px;
+  line-height: calc(22px / 12px);
+  letter-spacing: 0.04em;
+  @include tablet {
+    margin-bottom: 12px;
+    font-size: 14px;
+    line-height: calc(26px / 14px);
+  }
+  @include desktop {
+    margin-bottom: 8px;
+    font-size: 16px;
+    line-height: calc(30px / 16px);
+  }
 }
 
 .contacts__adress {
   padding: 0;
-  margin-top: 0;
-  margin-left: 0;
-  margin-bottom: 24px;
+  margin: 0 0 24px;
   font-size: 12px;
   line-height: calc(22px / 12px);
   letter-spacing: 0.04em;
   background-color: transparent;
   color: #d6936d;
+  @include tablet {
+    margin-bottom: 32px;
+    font-size: 14px;
+    line-height: calc(26px / 14px);
+  }
+  @include desktop {
+    font-size: 16px;
+    line-height: calc(29px / 16px);
+    &:hover,
+    :active {
+      text-decoration-line: underline;
+    }
+  }
 }
 
 .work_day {
   margin-bottom: 8px;
+  @include desktop {
+    margin-bottom: 12px;
+  }
 }
 
 .exit_day {
   margin-bottom: 24px;
+  @include tablet {
+    margin-bottom: 32px;
+  }
 }
 
+.contacts__day {
+  font-size: 12px;
+  line-height: calc(22px / 12px);
+  @include tablet {
+    font-size: 14px;
+    line-height: calc(26px / 14px);
+  }
+  @include desktop {
+    font-size: 16px;
+    line-height: calc(30px / 16px);
+  }
+}
 .contacts__time {
   font-size: 12px;
   line-height: calc(22px / 12px);
   color: #ababab;
+  @include tablet {
+    font-size: 14px;
+    line-height: calc(26px / 14px);
+  }
+  @include desktop {
+    font-size: 16px;
+    line-height: calc(30px / 16px);
+  }
 }
 
 .contacts__tel {
+  display: block;
   padding: 0;
-  margin-top: 0;
-  margin-left: 0;
-  margin-bottom: 6px;
+  margin: 0 0 6px;
   background-color: transparent;
   color: #131313;
+  font-size: 12px;
+  line-height: calc(19px / 12px);
+  @include tablet {
+    font-size: 14px;
+    line-height: calc(21px / 14px);
+    margin-bottom: 4px;
+  }
+  @include desktop {
+    font-size: 16px;
+    line-height: calc(24px / 16px);
+  }
 }
 
 .contacts__mail {
+  display: block;
   padding: 0;
-  margin-top: 0;
-  margin-left: 0;
+  margin: 0;
   background-color: transparent;
   color: #131313;
+  font-size: 12px;
+  line-height: calc(19px / 12px);
+  @include tablet {
+    font-size: 14px;
+    line-height: calc(21px / 14px);
+  }
+  @include desktop {
+    font-size: 16px;
+    line-height: calc(24px / 16px);
+  }
 }
 
 .contacts__buttons {
   margin-bottom: 60px;
+  @include tablet {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .btn-location {
@@ -130,6 +234,10 @@
   background-color: #f8d24e;
   border-radius: 10px;
   border-color: transparent;
+  @include tablet {
+    margin: 0;
+    margin-right: 16px;
+  }
 }
 
 .btn-franchise {
@@ -149,6 +257,9 @@
   background-color: transparent;
   border-radius: 10px;
   border: 2px solid #f8d24e;
+  @include tablet {
+    margin: 0;
+  }
 }
 .btn-svg {
   margin-left: 7px;
