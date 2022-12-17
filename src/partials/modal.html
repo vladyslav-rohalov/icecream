@@ -1,0 +1,20 @@
+<section>
+  <!-- МОДАЛЬНОЕ ОКНО -->
+  <!-- CSS стили модалки лежат в _modal.scss -->
+  <!-- Кнопка для модалки. Добавь свой класс CSS и поменяй название для data-modal -->
+  <button class="js-open-modal" data-modal="openModalBuyNow">
+    Открыть модалку
+  </button>
+
+  <!-- Контйнер для модалки. Добавь стили CSS, поменяй название для data-modal на идентичное как у кнопки-->
+  <div class="modal" data-modal="openModalBuyNow">
+    <svg class="modal__cross js-modal-close">
+      <use class="" href="./images/icons.svg#icon-close-modal20"></use>
+    </svg>
+    <p class="modal__title">Модальное окно 1</p>
+  </div>
+  <!-- Конец модалок -->
+
+  <!-- Подложка (Backdrop) под модальным окном, нужно поставить в конец, перд закрытием body -->
+  <div class="overlay js-overlay-modal"></div>
+</section>
