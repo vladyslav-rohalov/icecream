@@ -5,9 +5,11 @@
   <button class="contacts-open js-open-modal" data-modal="openModalContacts">
     Our Locations
   </button>
-
+  <button class="franchise-open js-open-modal" data-modal="openModalFranchise">
+    Franchise
+  </button>
   <!-- Контйнер для модалки. Добавь стили CSS, поменяй название для data-modal на идентичное как у кнопки-->
-  <div class="modal" data-modal="openModalContacts">
+  <div class="modal modal-locations" data-modal="openModalContacts">
     <svg class="modal__cross js-modal-close">
       <use class="" href="./images/icons.svg#icon-close-modal20"></use>
     </svg>
@@ -21,6 +23,67 @@
         referrerpolicy="no-referrer-when-downgrade"
         class="modal__map"
       ></iframe>
+    </div>
+    <button type="button" class="modal__btn">Open map</button>
+  </div>
+  <div class="modal modal-franchise" data-modal="openModalFranchise">
+    <svg class="modal__cross js-modal-close">
+      <use class="" href="./images/icons.svg#icon-close-modal20"></use>
+    </svg>
+    <p class="modal__title">
+      Thank you for your interest in owning an Ice Cream shop
+    </p>
+    <p class="modal__description">
+      Due to the overwhelming volume of franchise requests we are not accepting
+      new franchisee applications at this time. Once the application process
+      resumes, we will contact you for further information. Please fill out the
+      contact information below and we will reach out for additional
+      information. We appreciate your patience.
+    </p>
+    <div class="modal__field">
+      <label class="modal__label" for="name"></label>
+      <div class="control">
+        <input
+          type="text"
+          name="name"
+          id="name"
+          class="text-input"
+          placeholder="Name"
+        />
+      </div>
+    </div>
+    <div class="modal__field">
+      <label class="modal__label" for="tel"></label>
+      <div class="control">
+        <input
+          type="tel"
+          name="tel"
+          id="tel"
+          class="text-input"
+          placeholder="Phone"
+        />
+      </div>
+    </div>
+    <div class="modal__field">
+      <label class="modal__label" for="mail"></label>
+      <div class="control">
+        <input
+          type="email"
+          name="mail"
+          id="mail"
+          class="text-input"
+          placeholder="Email"
+        />
+      </div>
+    </div>
+    <div class="comment">
+      <label class="comment__label" for="comment"></label>
+      <textarea
+        class="comment__input"
+        name="comment"
+        id="comment"
+        placeholder="Comment"
+      ></textarea>
     </div>
     <button type="button" class="modal__btn">Open map</button>
   </div>
