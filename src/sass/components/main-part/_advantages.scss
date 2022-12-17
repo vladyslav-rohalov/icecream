@@ -1,5 +1,5 @@
 .advantages {
-    padding: 50px 45px 32px 45px;
+    padding: 50px 0 32px;
     margin: 0 auto;
     background-color: $solid-bg-color;
 
@@ -9,17 +9,19 @@
 
     @include tablet {
         width: 768px;
-        padding: 60px 76px;
+        padding: 60px 0;
     }
 
     @include desktop {
         width: 1200px;
-        padding: 60px 16px 80px 16px;
+        padding-bottom: 80px;
     }
 }
 .advantages__list {
     @include tablet {
         display: flex;
+        justify-content: center;
+        gap: 80px;
     }
 }
 .advantages__item {
@@ -32,15 +34,14 @@
 
         &:not(:last-child) {
             margin-bottom: 0;
-            margin-right: 80px;
         }
     }
     @include desktop {
         width: 368px;
 
-        &:not(:last-child) {
-            margin-right: 32px;
-        }
+        // &:not(:last-child) {
+        //     margin-right: 32px;
+        // }
     }
 }
 .advantages__icon-bg {
