@@ -37,7 +37,7 @@
 }
 
 .contacts__item {
-  margin-bottom: 20px;
+  margin-bottom: 24px;
   border-bottom: 1px solid #e1e1e1;
   &:last-child {
     display: flex;
@@ -51,6 +51,9 @@
 }
 
 .contacts__adress {
+  padding: 0;
+  margin-top: 0;
+  margin-left: 0;
   margin-bottom: 24px;
   font-size: 12px;
   line-height: calc(22px / 12px);
@@ -67,8 +70,27 @@
   margin-bottom: 24px;
 }
 
+.contacts__time {
+  font-size: 12px;
+  line-height: calc(22px / 12px);
+  color: #ababab;
+}
+
 .contacts__tel {
+  padding: 0;
+  margin-top: 0;
+  margin-left: 0;
   margin-bottom: 6px;
+  background-color: transparent;
+  color: #131313;
+}
+
+.contacts__mail {
+  padding: 0;
+  margin-top: 0;
+  margin-left: 0;
+  background-color: transparent;
+  color: #131313;
 }
 
 .contacts__buttons {
@@ -83,6 +105,11 @@
   width: 196px;
   margin-bottom: 16px;
   padding: 12px 40px;
+
+  font-weight: 600;
+  font-size: 14px;
+  line-height: calc(18px / 14px);
+  color: #131313;
   background-color: #f8d24e;
   border-radius: 10px;
   border-color: transparent;
@@ -95,6 +122,11 @@
   justify-content: center;
   width: 196px;
   padding: 12px 40px;
+
+  font-weight: 600;
+  font-size: 14px;
+  line-height: calc(18px / 14px);
+  color: #000000;
   background-color: transparent;
   border-radius: 10px;
   border: 2px solid #f8d24e;

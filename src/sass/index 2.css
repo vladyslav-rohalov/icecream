@@ -1,0 +1,349 @@
+@charset "UTF-8";
+@import '~node_modules/modern-normalize/modern-normalize.css';
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
+  margin: -1px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+p {
+  margin: 0;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  padding: 0;
+  font-style: normal;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  color: #131313;
+  line-height: 1.25;
+  letter-spacing: 0.04;
+  background-image: url("/src/images/general/mobile-bg.jpg");
+  background-size: cover;
+  background-position: center;
+}
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  body {
+    background-image: url("/src/images/general/mobile-bg@2x.jpg");
+  }
+}
+@media screen and (min-width: 768px) {
+  body {
+    background-image: url("/src/images/general/tablet-bg.jpg");
+  }
+}
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  body {
+    background-image: url("/src/images/general/tablet-bg@2x.jpg");
+  }
+}
+@media screen and (min-width: 1200px) {
+  body {
+    background-image: url("/src/images/general/desktop-bg.jpg");
+  }
+}
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  body {
+    background-image: url("/src/images/general/desktop-bg@2x.jpg");
+  }
+}
+
+.container {
+  min-width: 320px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+@media screen and (min-width: 480px) {
+  .container {
+    max-width: 480px;
+    padding: 0 20px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+    padding: 0 32px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+    padding: 16px;
+  }
+}
+
+.section {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 60px 0;
+}
+
+/* Стили для подложки */
+.overlay {
+  /* Скрываем подложку  */
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 20;
+  transition: 0.3s all;
+}
+
+/* Стили для модальных окон */
+.modal {
+  /* Скрываем окна  */
+  opacity: 0;
+  visibility: hidden;
+  /*  Установаем ширину окна  */
+  width: 100%;
+  max-width: 500px;
+  /*  Центрируем и задаем z-index */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 30; /* Должен быть выше чем у подложки*/
+  /*  Побочные стили   */
+  box-shadow: 0 3px 10px -0.5px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  padding: 30px;
+  border-radius: 3px;
+  background-color: #fff;
+  transition: 0.3s all;
+}
+
+/* Стили для активных классов подложки и окна */
+.modal.active,
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Стили для кнопки закрытия */
+.modal__cross {
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  fill: #444;
+  cursor: pointer;
+}
+
+/* Стили для кнопок. Мы ведь порядочные разработчики, негоже простые ссылки оставлять */
+a {
+  padding: 20px;
+  display: inline-block;
+  text-decoration: none;
+  background-color: #414b52;
+  margin: 10px;
+  color: #fff;
+  border-radius: 3px;
+}
+
+.container-gallery {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 320px;
+}
+@media screen and (min-width: 768px) {
+  .container-gallery {
+    width: 768px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container-gallery {
+    width: 1200px;
+    padding-left: 93px;
+    padding-right: 94px;
+  }
+}
+
+.section-gallery {
+  padding-bottom: 40px;
+  background: linear-gradient(180deg, rgb(132, 161, 120) 10%, rgba(255, 255, 255, 0) 10%);
+}
+@media screen and (min-width: 768px) {
+  .section-gallery {
+    padding-bottom: 80px;
+    background: linear-gradient(180deg, rgb(132, 161, 120) 17%, rgba(255, 255, 255, 0) 17%);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .section-gallery {
+    padding-bottom: 100px;
+    background: linear-gradient(180deg, rgb(132, 161, 120) 5%, rgba(255, 255, 255, 0) 5%);
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.swiper-slide__image {
+  border-radius: 8px;
+}
+@media screen and (min-width: 768px) {
+  .swiper-slide__image {
+    border-radius: 18px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .swiper-slide__image {
+    border-radius: 24px;
+  }
+}
+
+.contacts__title {
+  display: none;
+}
+
+.contacts__thumb {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0;
+  margin-bottom: 16px;
+  padding-left: 32px;
+  padding-right: 32px;
+  background-color: #fcfcfc;
+  box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+  border-radius: 24px;
+}
+.contacts__thumb:last-child {
+  margin-bottom: 20px;
+}
+
+.contacts__name {
+  display: block;
+  width: 80px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  padding: 4px 22px;
+  font-size: 12px;
+  line-height: 1.1666666667;
+  letter-spacing: 0.04em;
+  color: #131313;
+  background-color: #f8d24e;
+  border-radius: 4px;
+}
+
+.max {
+  width: 130px;
+}
+
+.contacts__item {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #e1e1e1;
+}
+.contacts__item:last-child {
+  display: flex;
+  flex-direction: column;
+  border-bottom: none;
+}
+
+.contacts__town {
+  margin-bottom: 8px;
+}
+
+.contacts__adress {
+  margin-bottom: 24px;
+  font-size: 12px;
+  line-height: 1.8333333333;
+  letter-spacing: 0.04em;
+  background-color: transparent;
+  color: #d6936d;
+}
+
+.work_day {
+  margin-bottom: 8px;
+}
+
+.exit_day {
+  margin-bottom: 24px;
+}
+
+.contacts__tel {
+  margin-bottom: 6px;
+}
+
+.contacts__buttons {
+  margin-bottom: 60px;
+}
+
+.btn-location {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  width: 196px;
+  margin-bottom: 16px;
+  padding: 12px 40px;
+  background-color: #f8d24e;
+  border-radius: 10px;
+  border-color: transparent;
+}
+
+.btn-franchise {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  width: 196px;
+  padding: 12px 40px;
+  background-color: transparent;
+  border-radius: 10px;
+  border: 2px solid #f8d24e;
+}
+
+.btn-svg {
+  width: 5px;
+  height: 10px;
+}/*# sourceMappingURL=index.css.map */
