@@ -1,0 +1,14 @@
+.animation {
+  opacity: 0.3;
+  display: flex;
+  gap: 50px;
+  margin-top: 50px;
+  justify-content: center;
+}
+.animation__item {
+  font-size: 30px;
+}
+
+.isActive {
+  opacity: 1;
+}

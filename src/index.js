@@ -1,4 +1,9 @@
+// Throttle
+const throttle = require('lodash.throttle');
+
 //Swiper
+//-------------------------------------------------------------------------------------
+
 import Swiper, { Pagination, Keyboard, Autoplay } from 'swiper';
 import '../node_modules/swiper/swiper.scss';
 import '../node_modules/swiper/modules/pagination/pagination.scss';
@@ -19,6 +24,8 @@ const swiper = new Swiper('.swiper', {
 });
 
 //Modal window
+//-------------------------------------------------------------------------------------
+
 !(function (e) {
   'function' != typeof e.matches &&
     (e.matches =
@@ -103,3 +110,78 @@ document.addEventListener('DOMContentLoaded', function () {
     this.classList.remove('active');
   });
 }); // end ready
+
+// Numbers animation
+
+refs = {
+  animationEl: document.querySelector('.animation'),
+  numberPossFirst: document.querySelector('[data-number="1"]'),
+  numberPossSecond: document.querySelector('[data-number="2"]'),
+  numberPossThird: document.querySelector('[data-number="3"]'),
+};
+
+const animationElHeight = refs.animationEl.offsetHeight;
+const animationElOffest = offset(refs.animationEl).top;
+
+console.log(`Высота элемента - ${animationElHeight}`);
+console.log(`Высота верха до елемента - ${animationElOffest}`);
+console.log(`Высота окна браузера - ${window.innerHeight}`);
+
+function offset(el) {
+  const rect = el.getBoundingClientRect(),
+    scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+    scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  return { top: rect.top + scrollTop, left: rect.left + scrollLeft };
+}
+
+const throttledOnScrollMouse = throttle(onScrollMouse, 1000);
+
+window.addEventListener('scroll', throttledOnScrollMouse);
+
+function onScrollMouse() {
+  console.log(`Проскролил px - ${scrollY}`);
+  if (
+    scrollY <
+    animationElOffest - window.innerHeight + animationElHeight - 1
+  ) {
+    return;
+  }
+  refs.animationEl.classList.add('isActive');
+  changeNumberFirst();
+  changeNumberSecond();
+  changeNumberThird();
+  window.removeEventListener('scroll', throttledOnScrollMouse);
+}
+
+function changeNumberFirst() {
+  let counter = 0;
+  const timerId = setInterval(() => {
+    if (counter === 721) {
+      clearInterval(timerId);
+    }
+    refs.numberPossFirst.textContent = counter;
+    counter += 7;
+  }, 50);
+}
+
+function changeNumberSecond() {
+  let counterSecond = 0;
+  const timerId = setInterval(() => {
+    if (counterSecond === 16) {
+      clearInterval(timerId);
+    }
+    refs.numberPossSecond.textContent = counterSecond + 'kg';
+    counterSecond += 1;
+  }, 310);
+}
+
+function changeNumberThird() {
+  let counterThird = 0;
+  const timerId = setInterval(() => {
+    if (counterThird === 84) {
+      clearInterval(timerId);
+    }
+    refs.numberPossThird.textContent = counterThird;
+    counterThird += 1;
+  }, 60);
+}
