@@ -1,6 +1,7 @@
 <header class="header container">
         <picture>
           <img 
+          class="logo"
           srcset="
           ./images/header/logo/s_40.png 40w, 
           ./images/header/logo/m_48.png 48w, 
@@ -31,7 +32,7 @@
           </svg>
         </button>
         <div class="menu-container js-menu-container" id="mobile-menu">
-                  <img class="logo" src="./images/header/logo/m_48.png" alt="logo">
+                  <img class="logo_menu" src="./images/header/logo/m_48.png" alt="logo">
             <button class="menu-toggle js-close-menu">
               <svg class="menu_icon_close" width="32" height="32">
                 <use href="./images/icons.svg#icon-close-menu"></use>
@@ -43,6 +44,13 @@
               <li class="mobile_list"><a href="" class="mobile_link link">Our products</a></li>
               <li class="mobile_list"><a href="" class="mobile_link link">Contact</a></li>
             </ul>
+            <div class="btn_header">
+              <button class="header_bt-menu" type="button">Buy now 
+                <svg class="icon_arrow" width="12" height="12">
+                  <use href="./images/icons.svg#icon-arrow-short"></use>
+                </svg>
+              </button>
+            </div>
           <script
             defer
             src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
