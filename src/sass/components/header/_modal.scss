@@ -43,6 +43,11 @@
   border: 2px solid $accent-color;
   border-radius: 10px;
   transition: opacity 300ms ease-in-out, visibility 300ms ease-in-out;
+
+  @include tablet {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
 }
 
 /* Стили для заголовка */
