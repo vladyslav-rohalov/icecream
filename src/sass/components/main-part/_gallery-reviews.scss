@@ -1,40 +1,41 @@
+.section-gallery {
+  padding-bottom: 40px;
+
+  @media screen and (min-width: $tablet) {
+    padding-bottom: 80px;
+  }
+  @media screen and (min-width: $desktop) {
+    padding-bottom: 100px;
+  }
+}
+
 .container-gallery {
   margin-left: auto;
   margin-right: auto;
   padding-left: 20px;
   padding-right: 20px;
-  width: 320px;
-
-  @media screen and (min-width: 768px) {
-    width: 768px;
-    padding-left: 32px;
-    padding-right: 32px;
-  }
-
-  @media screen and (min-width: 1200px) {
-    width: 1200px;
-    padding-left: 93px;
-    padding-right: 94px;
-  }
-}
-
-.section-gallery {
-  padding-bottom: 40px;
+  max-width: 480px;
   background: linear-gradient(
     180deg,
-    rgba(132, 161, 120, 1) 10%,
-    rgba(255, 255, 255, 0) 10%
+    $solid-bg-rgba 10%,
+    $transparent-bg-rgba 10%
   );
-  @media screen and (min-width: 768px) {
-    padding-bottom: 80px;
+
+  @media screen and (min-width: $tablet) {
+    max-width: $tablet;
+    padding-left: 32px;
+    padding-right: 32px;
     background: linear-gradient(
       180deg,
-      rgba(132, 161, 120, 1) 17%,
-      rgba(255, 255, 255, 0) 17%
+      rgba(132, 161, 120, 1) 14%,
+      rgba(255, 255, 255, 0) 14%
     );
   }
-  @media screen and (min-width: 1200px) {
-    padding-bottom: 100px;
+
+  @media screen and (min-width: $desktop) {
+    max-width: $desktop;
+    padding-left: 93px;
+    padding-right: 94px;
     background: linear-gradient(
       180deg,
       rgba(132, 161, 120, 1) 5%,
@@ -43,26 +44,88 @@
   }
 }
 
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-
 .swiper-slide__image {
   border-radius: 8px;
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $tablet) {
     border-radius: 18px;
   }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: $desktop) {
     border-radius: 24px;
+  }
+}
+
+.review {
+  text-align: center;
+  margin-top: 80px;
+
+  @media screen and (min-width: $tablet) {
+    margin-top: 100px;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-top: 140px;
+  }
+
+  & img {
+    display: block;
+    margin: 0 auto;
+    width: 85px;
+    height: 85px;
+
+    border-radius: 50%;
+  }
+}
+.review__container {
+  margin: 0 auto;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  height: 256px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(132, 161, 120, 1);
+  border-radius: 10px;
+
+  @media screen and (min-width: $mobile) {
+    max-width: $mobile;
+  }
+
+  @media screen and (min-width: $tablet) {
+    max-width: 705px;
+    border-radius: 24px;
+  }
+  @media screen and (min-width: $desktop) {
+    max-width: 968px;
+  }
+}
+.review__text {
+  padding: 0 39px 0 39px;
+  font-size: 12px;
+  line-height: 2.55em;
+  color: #fcfcfc;
+  @media screen and (min-width: $tablet) {
+    padding: 28px 80px;
+
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.86em;
+    letter-spacing: 0.04;
+  }
+  @media screen and (min-width: $desktop) {
+    padding: 43px 109px;
+
+    font-size: 16px;
+  }
+}
+.review__title {
+  padding-bottom: 12px;
+
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.86em;
+  color: #131313;
+
+  @media screen and (min-width: $tablet) {
+    font-size: 16px;
+    padding-bottom: 32px;
   }
 }

@@ -1,10 +1,11 @@
 @import './common';
-@import './utilities/variables';
 @import './utilities/mixin';
+@import './utilities/variables';
 @import './utilities/placeholders';
 @import './utilities/utilities';
 @import './utilities/global';
 @import './utilities/keyframes';
+@import '../../node_modules/animate.css/animate.css';
 @import './components/header/header';
 @import './components/header/mobile-menu';
 @import './components/header/modal';
