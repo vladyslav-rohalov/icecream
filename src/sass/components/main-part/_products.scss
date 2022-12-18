@@ -474,6 +474,7 @@
   background-color: rgba(248, 210, 78, 0.1);
   border: 1px solid $solid-bg-color;
   border-radius: 10px;
+  transition: border 300ms ease-in-out;
 
   &::placeholder {
     color: $primary-font-color;
