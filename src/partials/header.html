@@ -1,0 +1,58 @@
+<header class="header container">
+        <picture>
+          <img 
+          srcset="
+          ./images/header/logo/s_40.png 40w, 
+          ./images/header/logo/m_48.png 48w, 
+          ./images/header/logo/l_60.png 60w
+          "
+          sizes=" (min-width: 1200px) 60px, (min-width: 768px) 48px, (min-width: 320px) 40px,"
+          src="./images/header/logo/l_60.png" 
+          alt="logo"
+          >
+      </picture>
+        <!-- <img class="logo" src="./images/header/logo/l_60.png" alt="logo"> -->
+        <nav>
+          <ul class="header_nav">
+            <li class="header_nav-list"><a class="header_nav-link" href="">Home</a></li>
+            <li class="header_nav-list"><a class="header_nav-link" href="">How it’s made?</a></li>
+            <li class="header_nav-list"><a class="header_nav-link" href="">Our products</a></li>
+            <li class="header_nav-list"><a class="header_nav-link" href="">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="header_mobile_menu">
+        <button
+          class="menu-toggle js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg class="menu_icon" width="32" height="32">
+            <use href="./images/icons.svg#icon-burger"></use>
+          </svg>
+        </button>
+        <div class="menu-container js-menu-container" id="mobile-menu">
+            <button class="menu-toggle js-close-menu">
+              <svg class="menu_icon_close" width="32" height="32">
+                <use href="./images/icons.svg#icon-close-menu"></use>
+              </svg>
+            </button>
+            <ul class="mobile-menu">
+              <li class="mobile_list"><a href="" class="mobile_link link">Home</a></li>
+              <li class="mobile_list"><a href="" class="mobile_link link">How it’s made?</a></li>
+              <li class="mobile_list"><a href="" class="mobile_link link">Our products</a></li>
+              <li class="mobile_list"><a href="" class="mobile_link link">Contact</a></li>
+            </ul>
+          <script
+            defer
+            src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+            integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+            crossorigin="anonymous"
+          ></script>
+          <script defer src="menu-mobile.js"></script>
+          </div>
+         <button class="header_bt" type="button">Buy now 
+          <svg class="icon_arrow" width="12" height="12">
+            <use href="./images/icons.svg#icon-arrow-short"></use>
+          </svg>
+         </button>
+    </header>
