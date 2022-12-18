@@ -114,7 +114,7 @@ document.addEventListener('DOMContentLoaded', function () {
 // Numbers animation
 
 refs = {
-  animationEl: document.querySelector('.animation'),
+  animationEl: document.querySelector('.advantages__text'),
   numberPossFirst: document.querySelector('[data-number="1"]'),
   numberPossSecond: document.querySelector('[data-number="2"]'),
   numberPossThird: document.querySelector('[data-number="3"]'),
@@ -123,9 +123,11 @@ refs = {
 const animationElHeight = refs.animationEl.offsetHeight;
 const animationElOffest = offset(refs.animationEl).top;
 
-console.log(`Высота элемента - ${animationElHeight}`);
-console.log(`Высота верха до елемента - ${animationElOffest}`);
-console.log(`Высота окна браузера - ${window.innerHeight}`);
+console.log(
+  `Для анимации необходимо проскролить: ${
+    animationElOffest - window.innerHeight + animationElHeight - 1
+  }`
+);
 
 function offset(el) {
   const rect = el.getBoundingClientRect(),
