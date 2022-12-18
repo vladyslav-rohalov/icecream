@@ -1,9 +1,15 @@
 .hero {
+  padding: 0;
+}
+
+.hero__background {
   @media screen and (min-width: 320px) {
     min-width: 320px;
+    height: 502px;
 
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
+    background-position: 50% 100%;
 
     background-image: url(../images/hero/mobile-dot.png);
 
@@ -13,14 +19,15 @@
       background-image: url(../images/hero/mobile-dot@2x.png);
       margin-top: 452px;
     }
-
     background-color: $solid-bg-color;
   }
 
   @include tablet {
     width: 768px;
+    height: 415px;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
+    background-position: 50% 100%;
 
     background-image: url(../images/hero/tablet-dot.png);
 
@@ -37,7 +44,8 @@
     height: 664px;
 
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
+    background-position: 50% 100%;
 
     background-image: url(../images/hero/desctop-dot.png);
 
@@ -53,6 +61,8 @@
 
 .hero__container {
   display: flex;
+
+  position: relative;
 }
 
 .hero__main--title {
@@ -91,7 +101,6 @@
 }
 
 .hero__button {
-
   display: flex;
   gap: 12px;
   align-items: center;
@@ -100,9 +109,9 @@
     margin-top: 32px;
     margin-left: 20px;
   }
-@include tablet {
-margin-top: 24px;
-}
+  @include tablet {
+    margin-top: 24px;
+  }
   @include desktop {
     margin-top: 28px;
   }
@@ -231,9 +240,12 @@ margin-top: 24px;
     gap: 32px;
   }
 
+  @include desktop {
+    gap: 16px;
+  }
 }
-.hero__img {
 
+.hero__img {
   @media screen and (max-width: 480px) {
     display: none;
   }
@@ -253,7 +265,6 @@ margin-top: 24px;
     border-radius: 50%;
 
     margin-bottom: 65px;
-    margin-left: 16px;
   }
 }
 
@@ -267,7 +278,6 @@ margin-top: 24px;
   }
   @include desktop {
     width: 200px;
-    margin-right: 195px;
   }
 }
 .hero__uppertitle--text {
@@ -289,61 +299,33 @@ margin-top: 24px;
   fill: $secondary-font-color;
 }
 
+.hero__icecream {
+  margin-top: 31px;
+}
+
 .hero__right--side {
   @media screen and (min-width: 320px) {
     width: 177px;
     height: 217px;
-
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 236px;
-
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-image: url(../images/hero/mobile-hero-bg.png);
-
-    @media (min-device-pixel-ratio: 2),
-      (min-resolution: 192dpi),
-      (min-resolution: 2dppx) {
-      background-image: url(../images/hero/mobile-hero-bg@2x.png);
-    }
+    position: absolute;
+    top: 50%;
+    left: 30%;
   }
 
   @include tablet {
     width: 268px;
     height: 329px;
-
-    margin-left: auto;
-
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-image: url(../images/hero/tablet-hero-bg.png);
-
-    @media (min-device-pixel-ratio: 2),
-      (min-resolution: 192dpi),
-      (min-resolution: 2dppx) {
-      background-image: url(../images/hero/tablet-hero-bg@2x.png);
-    }
+    position: absolute;
+    top: 14%;
+    left: 58%;
   }
 
   @include desktop {
     width: 456px;
     height: 560px;
-
-    margin-left: auto;
-    margin-top: 31px;
-
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-image: url(../images/hero/desktop-hero-bg.png);
-    @media (min-device-pixel-ratio: 2),
-      (min-resolution: 192dpi),
-      (min-resolution: 2dppx) {
-      background-image: url(../images/hero/desktop-hero-bg@2x.png);
-    }
+    position: absolute;
+    top: 10%;
+    left: 57%;
   }
 }
 
