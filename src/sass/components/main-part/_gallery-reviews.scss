@@ -1,40 +1,41 @@
+.section-gallery {
+  padding-bottom: 40px;
+
+  @media screen and (min-width: $tablet) {
+    padding-bottom: 80px;
+  }
+  @media screen and (min-width: $desktop) {
+    padding-bottom: 100px;
+  }
+}
+
 .container-gallery {
   margin-left: auto;
   margin-right: auto;
   padding-left: 20px;
   padding-right: 20px;
-  width: 320px;
-
-  @media screen and (min-width: 768px) {
-    width: 768px;
-    padding-left: 32px;
-    padding-right: 32px;
-  }
-
-  @media screen and (min-width: 1200px) {
-    width: 1200px;
-    padding-left: 93px;
-    padding-right: 94px;
-  }
-}
-
-.section-gallery {
-  padding-bottom: 40px;
+  max-width: 480px;
   background: linear-gradient(
     180deg,
-    rgba(132, 161, 120, 1) 10%,
-    rgba(255, 255, 255, 0) 10%
+    $solid-bg-rgba 10%,
+    $transparent-bg-rgba 10%
   );
-  @media screen and (min-width: 768px) {
-    padding-bottom: 80px;
+
+  @media screen and (min-width: $tablet) {
+    max-width: $tablet;
+    padding-left: 32px;
+    padding-right: 32px;
     background: linear-gradient(
       180deg,
-      rgba(132, 161, 120, 1) 17%,
-      rgba(255, 255, 255, 0) 17%
+      rgba(132, 161, 120, 1) 14%,
+      rgba(255, 255, 255, 0) 14%
     );
   }
-  @media screen and (min-width: 1200px) {
-    padding-bottom: 100px;
+
+  @media screen and (min-width: $desktop) {
+    max-width: $desktop;
+    padding-left: 93px;
+    padding-right: 94px;
     background: linear-gradient(
       180deg,
       rgba(132, 161, 120, 1) 5%,
@@ -43,60 +44,26 @@
   }
 }
 
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-
 .swiper-slide__image {
   border-radius: 8px;
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $tablet) {
     border-radius: 18px;
   }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: $desktop) {
     border-radius: 24px;
   }
 }
 
-// CSS відгуків покупців!!!!
-
-.container--top-margin {
-  margin-top: 80px;
-  justify-content: center;
-}
 .review {
-  margin: 0 auto;
-  // outline: 2px solid tomato;
-  // padding-left: 20px;
-  // padding-right: 20px;
-  @media screen and (min-width: 480px) {
-    width: 440px;
-  }
-  @media screen and (min-width: 768px) {
-    width: 704px;
-  }
-  @media screen and (min-width: 1200px) {
-    width: 1168px;
-    padding-left: 100px;
-    padding-right: 100px;
-  }
-}
-.review__item {
   text-align: center;
-  // margin-bottom: 3px;
+  margin-top: 80px;
 
-  // @media screen and (min-width: 768px) {
-  //   margin-bottom: 23px;
-  // }
+  @media screen and (min-width: $tablet) {
+    margin-top: 100px;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-top: 140px;
+  }
 
   & img {
     display: block;
@@ -107,34 +74,35 @@
     border-radius: 50%;
   }
 }
-.review__text-container {
+.review__container {
   margin: 0 auto;
   margin-top: 32px;
   margin-bottom: 32px;
-
+  height: 256px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: rgba(132, 161, 120, 1);
   border-radius: 10px;
 
-  @media screen and (min-width: 480px) {
-    width: 440px;
+  @media screen and (min-width: $mobile) {
+    max-width: $mobile;
   }
-  @media screen and (min-width: 768px) {
-    width: 704px;
+
+  @media screen and (min-width: $tablet) {
+    max-width: 705px;
     border-radius: 24px;
   }
-  @media screen and (min-width: 1200px) {
-    width: 968px;
+  @media screen and (min-width: $desktop) {
+    max-width: 968px;
   }
 }
 .review__text {
-  margin: 0;
-  padding: 0;
-  padding: 35px 39px;
-
+  padding: 0 39px 0 39px;
   font-size: 12px;
   line-height: 2.55em;
   color: #fcfcfc;
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $tablet) {
     padding: 28px 80px;
 
     font-size: 14px;
@@ -142,59 +110,22 @@
     line-height: 1.86em;
     letter-spacing: 0.04;
   }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: $desktop) {
     padding: 43px 109px;
 
     font-size: 16px;
   }
 }
 .review__title {
-  margin: 0;
-  padding: 0;
+  padding-bottom: 12px;
 
   font-size: 20px;
   font-weight: 500;
   line-height: 1.86em;
   color: #131313;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $tablet) {
     font-size: 16px;
+    padding-bottom: 32px;
   }
 }
-// .rewiew .slick-track {
-// 	display: flex;
-// }
-// .rewiew .slick-list {
-// 	overflow: hidden;
-// }
-// .rewiew .slick-dots {
-// 	display: flex;
-// 	align-items: center;
-// 	justify-content: center;
-// 	margin: 0;
-// 	padding: 0;
-// }
-// .rewiew .slick-dots li {
-// 	list-style: none;
-// 	justify-content: center;
-// 	padding: 0;
-
-// 	&:not(:last-child) {
-// 		margin-right: 18px;
-// 	}
-// 	&.slick-active button {
-// 		background-color: rgba(132, 161, 120, 1);
-// 	}
-// }
-
-// .rewiew .slick-dots li button {
-// 	padding: 0;
-// 	font-size: 0;
-// 	width: 12px;
-// 	height: 12px;
-
-// 	border-radius: 50%;
-// 	border: none;
-
-// 	background-color: rgba(217, 217, 217, 1);
-// }

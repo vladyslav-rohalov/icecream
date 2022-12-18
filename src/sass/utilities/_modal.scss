@@ -23,8 +23,10 @@
   visibility: hidden;
 
   /*  Установаем ширину окна  */
-  width: 100%;
-  max-width: 500px;
+  width: 280px;
+  @include tablet {
+    width: 568px;
+  }
 
   /*  Центрируем и задаем z-index */
   position: fixed;
@@ -53,13 +55,17 @@
 /* Стили для кнопки закрытия */
 
 .modal__cross {
-  width: 15px;
-  height: 15px;
+  width: 20px;
+  height: 20px;
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: 12px;
+  right: 12px;
   fill: #444;
   cursor: pointer;
+  @include tablet {
+    width: 24px;
+    height: 24px;
+  }
 }
 
 /* Стили для кнопок. Мы ведь порядочные разработчики, негоже простые ссылки оставлять */
