@@ -299,17 +299,17 @@
   fill: $secondary-font-color;
 }
 
-.hero__icecream {
-  margin-top: 31px;
-}
+// .hero__icecream {
+//   margin-top: 31px;
+// }
 
 .hero__right--side {
   @media screen and (min-width: 320px) {
     width: 177px;
     height: 217px;
     position: absolute;
-    top: 50%;
-    left: 30%;
+    top: 97%;
+    left: 28%;
   }
 
   @include tablet {
