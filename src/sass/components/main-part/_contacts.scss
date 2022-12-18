@@ -1,9 +1,9 @@
 .contacts {
   background-image: url(../images/general/mobile-bg.jpg);
-  background: linear-gradient(360deg, #84a178 50%, transparent 50%);
+  background: linear-gradient(360deg, #84a178 75%, transparent 50%);
   @include retina2x {
     background-image: url(../images/general/mobile-bg@2x.jpg);
-    background: linear-gradient(360deg, #84a178 50%, transparent 50%);
+    background: linear-gradient(360deg, #84a178 75%, transparent 50%);
   }
 
   @include tablet {
@@ -16,10 +16,10 @@
   }
   @include desktop {
     background-image: url(../images/general/desktop-bg.jpg);
-    background: linear-gradient(360deg, #84a178 50%, transparent 50%);
+    background: linear-gradient(360deg, #84a178 80%, transparent 50%);
     @include retina2x {
       background-image: url(../images/general/desktop-bg@2x.jpg);
-      background: linear-gradient(360deg, #84a178 50%, transparent 50%);
+      background: linear-gradient(360deg, #84a178 80%, transparent 50%);
     }
   }
 }
