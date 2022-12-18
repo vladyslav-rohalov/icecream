@@ -1,11 +1,71 @@
 <section class="hero">
   <div class="hero__container container">
-    <h1 class="hero__main--title">ice cream made with passion</h1>
     <div class="hero__left--side">
-      <button class="hero__button--first" type="button">Products</button>
-      <button class="hero__button--second" type="button">How it’s made?</button>
+      <h1 class="hero__main--title">ice cream made with passion</h1>
+      <div class="hero__button">
+        <button class="hero__button--first" type="button">Products</button>
+        <button class="hero__button--second" type="button">
+          How it’s made?
+        </button>
+      </div>
+      <div class="hero__picture">
+        <picture>
+          <source
+            media="(min-width: 1200px)"
+            srcset="
+              ./images/hero/desctop-many-icecream.webp 1x
+              ./images/hero/desktop-many-icecream@2x.webp 2x
+            "
+            type="image/webp"
+          />
+          <source
+            media="(min-width: 1200px)"
+            srcset="
+              ./images/hero/desktop-many-icecream.jpg    1x,
+              ./images/hero/desktop-many-icecream@2x.jpg 2x
+            "
+            type="image/jpg"
+          />
+          <source
+            media="(min-width: 768px)"
+            srcset="
+              ./images/hero/tablet-many-icecream.webp    1x,
+              ./images/hero/tablet-many-icecream@2x.webp 2x
+            "
+            type="image/webp"
+          />
+          <source
+            media="(min-width: 768px)"
+            srcset="
+              ./images/hero/tablet-many-icecream.jpg    1x,
+              ./images/hero/tablet-many-icecream@2x.jpg 2x
+            "
+            type="image/jpg"
+          />
+          <img
+            class="hero__img"
+            src="./images/hero/tablet-many-icecream.jpg"
+            alt="many ice cream"
+            width="325px"
+            height="325px"
+            loading="lazy"
+          />
+        </picture>
+        <div class="hero__uppertitle">
+          <p class="hero__uppertitle--text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et
+          </p>
+          <svg class="hero__icon" width="40" height="16">
+            <use href="./images/icons.svg#icon-arrow-long"></use>
+          </svg>
+        </div>
+      </div>
     </div>
-    <div class="heroo__right--side">
+    <div class="hero__right--side">
+
+    </div>
+    <div class="food__bracks">
       <ul class="hero__list">
         <li class="hero__iteam">
           <p class="hero__iteam--number">16</p>
@@ -16,14 +76,6 @@
           <p class="hero__iteam--text">food trucks</p>
         </li>
       </ul>
-      <div class="hero__uppertitle">
-        <p class="hero__uppertitle--text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-            tempor incididunt ut labore et
-        </p>
-        
-      </div>
-
     </div>
   </div>
 </section>

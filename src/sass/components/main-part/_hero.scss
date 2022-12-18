@@ -1,48 +1,403 @@
 .hero {
-    width: 1600px;
+  @media screen and (min-width: 320px) {
+    min-width: 320px;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    background-image: url(../images/hero/mobile-dot.png);
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/hero/mobile-dot@2x.png);
+      margin-top: 452px;
+    }
+
     background-color: $solid-bg-color;
+  }
+
+  @include tablet {
+    width: 768px;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    background-image: url(../images/hero/tablet-dot.png);
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/hero/tablet-dot@2x.png);
+    }
+    background-color: $solid-bg-color;
+  }
+
+  @include desktop {
+    width: 1200px;
+    height: 664px;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    background-image: url(../images/hero/desctop-dot.png);
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/hero/desctop-dot@2x.png);
+    }
+
+    background-color: $solid-bg-color;
+  }
+}
+
+.hero__container {
+  display: flex;
 }
 
 .hero__main--title {
-    width: 367px;
+  font-family: $secondary-font;
+  font-weight: 400;
 
-    font-family: $secondary-font;
-    font-weight: 400;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+
+  color: $secondary-font-color;
+
+  @media screen and (min-width: 320px) {
+    width: 247px;
+    margin-top: 50px;
+
+    font-size: 26px;
+    line-height: calc(33 / 26);
+  }
+
+  @include tablet {
+    width: 247px;
+    margin-top: 14px;
+
+    font-size: 26px;
+    line-height: calc(33 / 26);
+    letter-spacing: 0.04em;
+  }
+
+  @include desktop {
+    width: 367px;
+    margin-top: 45px;
+
     font-size: 38px;
     line-height: calc(48 / 38);
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    
-    color: $secondary-font-color;
+  }
 }
 
-.hero__left--side {
-    display: flex;
-    gap: 12px;
+.hero__button {
+
+  display: flex;
+  gap: 12px;
+  align-items: center;
+
+  @media screen and (min-width: 320px) {
+    margin-top: 32px;
+    margin-left: 20px;
+  }
+@include tablet {
+margin-top: 24px;
+}
+  @include desktop {
+    margin-top: 28px;
+  }
 }
 
-.heroo__right--side {
+.hero__button--first {
+  border: 2px solid $btn-default-color;
+
+  background-color: transparent;
+  color: $primary-font-color;
+  font-weight: 600;
+
+  @media screen and (min-width: 320px) {
+    width: 108px;
+    height: 38px;
+    border-radius: 8px;
+
+    font-size: 12px;
+    line-height: calc(15 / 12);
+
+    &:hover {
+      border-color: $btn-hover-bg;
+      color: $button-text-color;
+    }
+  }
+  @include tablet {
+    width: 108px;
+    height: 38px;
+    border-radius: 8px;
+
+    font-size: 12px;
+    line-height: calc(15 / 12);
+
+    &:hover {
+      border-color: $btn-hover-bg;
+      color: $button-text-color;
+    }
+  }
+
+  @include desktop {
+    width: 134px;
+    height: 42px;
+    border-radius: 10px;
+
+    font-size: 14px;
+    line-height: calc(18 / 14);
+
+    &:hover {
+      border-color: $btn-hover-bg;
+      color: $button-text-color;
+    }
+
+    &:focus {
+      border-color: $btn-hover-bg;
+      color: $secondary-font-color;
+    }
+  }
+}
+
+.hero__button--second {
+  border-radius: 10px;
+  border: solid transparent;
+  background-color: transparent;
+
+  align-items: center;
+  color: $accent-color;
+  text-decoration: underline;
+
+  font-weight: 600;
+
+  @media screen and (min-width: 320px) {
+    width: 114px;
+    height: 24px;
+
+    font-size: 12px;
+    line-height: calc(15 / 12);
+
+    &:hover {
+      color: $btn-hover-bg;
+    }
+
+    &:focus {
+      color: $secondary-font-color;
+    }
+  }
+  @include tablet {
+    width: 114px;
+    height: 24px;
+
+    font-size: 12px;
+    line-height: calc(15 / 12);
+
+    &:hover {
+      color: $btn-hover-bg;
+    }
+
+    &:focus {
+      color: $secondary-font-color;
+    }
+  }
+  @include desktop {
+    width: 154px;
+    height: 40px;
+
+    font-size: 14px;
+    line-height: calc(17 / 14);
+
+    &:hover {
+      color: $btn-hover-bg;
+    }
+
+    &:focus {
+      color: $secondary-font-color;
+    }
+  }
+}
+
+.hero__picture {
+  display: flex;
+  gap: 12;
+  align-items: center;
+
+  margin-top: 42px;
+
+  @include tablet {
+    gap: 32px;
+  }
+
+}
+.hero__img {
+
+  @media screen and (max-width: 480px) {
+    display: none;
+  }
+
+  @include tablet {
+    width: 152px;
+    height: 152px;
+    border-radius: 50%;
+
+    margin-bottom: 12px;
+    margin-left: 32px;
+  }
+
+  @include desktop {
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+
+    margin-bottom: 65px;
+    margin-left: 16px;
+  }
+}
+
+.hero__uppertitle {
+  @media screen and (max-width: 480px) {
+    display: none;
+  }
+
+  @include tablet {
+    width: 139px;
+  }
+  @include desktop {
+    width: 200px;
+    margin-right: 195px;
+  }
+}
+.hero__uppertitle--text {
+  font-family: $primary-font;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  color: $secondary-font-color;
+
+  @include tablet {
+    font-size: 12px;
+  }
+
+  @include desktop {
+    font-size: 14px;
+  }
+}
+.hero__icon {
+  fill: $secondary-font-color;
+}
+
+.hero__right--side {
+  @media screen and (min-width: 320px) {
+    width: 177px;
+    height: 217px;
+
     margin-left: auto;
-    display: flex;
-    flex-wrap: wrap;
+    margin-right: auto;
+    margin-top: 236px;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url(../images/hero/mobile-hero-bg.png);
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/hero/mobile-hero-bg@2x.png);
+    }
+  }
+
+  @include tablet {
+    width: 268px;
+    height: 329px;
+
+    margin-left: auto;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url(../images/hero/tablet-hero-bg.png);
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/hero/tablet-hero-bg@2x.png);
+    }
+  }
+
+  @include desktop {
+    width: 456px;
+    height: 560px;
+
+    margin-left: auto;
+    margin-top: 31px;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url(../images/hero/desktop-hero-bg.png);
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/hero/desktop-hero-bg@2x.png);
+    }
+  }
+}
+
+.food__bracks {
+  margin-left: auto;
+
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+}
+
+.hero__list {
+  @include tablet {
+    margin-top: 28px;
+  }
+
+  @include desktop {
+    margin-top: 53px;
+  }
 }
 
 .hero__iteam--number {
-    font-family: $primary-font;
-    font-weight: 900;
+  font-family: $primary-font;
+  font-weight: 900;
+
+  text-align: right;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: $primary-font-color;
+
+  @include tablet {
+    font-size: 28px;
+    line-height: calc(34 / 28);
+  }
+
+  @include desktop {
     font-size: 46px;
     line-height: calc(56 / 46);
-    text-align: right;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    color: $primary-font-color;
+  }
 }
 
 .hero__iteam--text {
-    font-family: $primary-font;
-    font-weight: 400;
+  font-family: $primary-font;
+  font-weight: 400;
+  text-align: right;
+  color: $secondary-font-color;
+
+  @include tablet {
+    font-size: 8px;
+    line-height: calc(10 / 8);
+  }
+
+  @include desktop {
     font-size: 14px;
     line-height: calc(17 / 14);
-    text-align: right;
-    color: $secondary-font-color;
+  }
 }
