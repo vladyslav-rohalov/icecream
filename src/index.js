@@ -1,3 +1,6 @@
+// Throttle
+const throttle = require('lodash.throttle');
+
 //Swiper
 //-------------------------------------------------------------------------------------
 
@@ -131,7 +134,9 @@ function offset(el) {
   return { top: rect.top + scrollTop, left: rect.left + scrollLeft };
 }
 
-window.addEventListener('scroll', onScrollMouse);
+const throttledOnScrollMouse = throttle(onScrollMouse, 1000);
+
+window.addEventListener('scroll', throttledOnScrollMouse);
 
 function onScrollMouse() {
   console.log(`Проскролил px - ${scrollY}`);
@@ -145,7 +150,7 @@ function onScrollMouse() {
   changeNumberFirst();
   changeNumberSecond();
   changeNumberThird();
-  window.removeEventListener('scroll', onScrollMouse);
+  window.removeEventListener('scroll', throttledOnScrollMouse);
 }
 
 function changeNumberFirst() {
