@@ -1,30 +1,8 @@
 .hero {
-<<<<<<< Updated upstream
   padding: 0;
 }
 
 .hero__background {
-=======
-
-    width: 1200px;
-    height: 664px;
-    justify-content: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-
-    background-image: url(../images/hero/desctop-dot.png);
-    margin: 0 auto;
-
-    @media (min-device-pixel-ratio: 2),
-      (min-resolution: 192dpi),
-      (min-resolution: 2dppx) {
-      background-image: url(../images/hero/desctop-dot@2x.png);
-    }
-
-    background-color: $solid-bg-color;
-   background-position: 50% 100%;
-
->>>>>>> Stashed changes
   @media screen and (min-width: 320px) {
     min-width: 320px;
     height: 502px;
@@ -63,7 +41,7 @@
 
   @include desktop {
     width: 1200px;
-    // height: 664px;
+    height: 664px;
 
     background-repeat: no-repeat;
     background-size: contain;
@@ -78,31 +56,14 @@
     }
 
     background-color: $solid-bg-color;
-  backgroubackground-position: right bottom;
   }
 }
-
 
 .hero__container {
   display: flex;
 
   position: relative;
 }
-
-// .background {
-  
-//   width: 1200px;
-
-//   justify-content: center;
-//   background-repeat: no-repeat;
-//   background-size: cover;
-
-//   background-image: url(../images/hero/desctop-dot.png);
-//   margin: 0 auto;
-
-//   background-color: $solid-bg-color;
-//   background-position: 50% 100%;
-// }
 
 .hero__main--title {
   font-family: $secondary-font;
@@ -338,7 +299,6 @@
   fill: $secondary-font-color;
 }
 
-<<<<<<< Updated upstream
 .hero__icecream {
   margin-top: 31px;
 }
@@ -368,65 +328,6 @@
     left: 57%;
   }
 }
-=======
-// .hero__right--side {
-//   @media screen and (min-width: 320px) {
-//     width: 177px;
-//     height: 217px;
-
-//     margin-left: auto;
-//     margin-right: auto;
-//     margin-top: 236px;
-
-//     background-repeat: no-repeat;
-//     background-size: cover;
-//     background-position: center;
-//     background-image: url(../images/hero/mobile-hero-bg.png);
-
-//     @media (min-device-pixel-ratio: 2),
-//       (min-resolution: 192dpi),
-//       (min-resolution: 2dppx) {
-//       background-image: url(../images/hero/mobile-hero-bg@2x.png);
-//     }
-//   }
-
-//   @include tablet {
-//     width: 268px;
-//     height: 329px;
-
-//     margin-left: auto;
-
-//     background-repeat: no-repeat;
-//     background-size: cover;
-//     background-position: center;
-//     background-image: url(../images/hero/tablet-hero-bg.png);
-
-//     @media (min-device-pixel-ratio: 2),
-//       (min-resolution: 192dpi),
-//       (min-resolution: 2dppx) {
-//       background-image: url(../images/hero/tablet-hero-bg@2x.png);
-//     }
-//   }
-
-//   @include desktop {
-//     width: 456px;
-//     height: 560px;
-
-//     margin-left: auto;
-//     margin-top: 31px;
-
-//     background-repeat: no-repeat;
-//     background-size: cover;
-//     background-position: center;
-//     background-image: url(../images/hero/desktop-hero-bg.png);
-//     @media (min-device-pixel-ratio: 2),
-//       (min-resolution: 192dpi),
-//       (min-resolution: 2dppx) {
-//       background-image: url(../images/hero/desktop-hero-bg@2x.png);
-//     }
-//   }
-// }
->>>>>>> Stashed changes
 
 .food__bracks {
   margin-left: auto;
