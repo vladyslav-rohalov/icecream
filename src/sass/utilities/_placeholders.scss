@@ -1,4 +1,3 @@
-
 %btn {
   display: block;
   margin: 0;
@@ -12,7 +11,9 @@
   text-align: center;
   background-color: $btn-default-color;
   border-radius: $btn-border-radius;
+  border: none;
   cursor: pointer;
+  transition: background-color 300ms ease-in-out;
 
   &:hover {
     background-color: $btn-hover-bg;
