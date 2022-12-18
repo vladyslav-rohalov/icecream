@@ -34,8 +34,9 @@ body {
   letter-spacing: 0.04;
 
   background-image: url('/src/images/general/mobile-bg.jpg');
-  background-size: cover;
+  background-size: contain;
   background-position: center;
+  background-repeat: repeat-y;
 
   @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
@@ -65,7 +66,6 @@ body {
 }
 
 .container {
-  min-width: 320px;
   max-width: 1200px;
   padding: 0 20px;
   margin: 0 auto;
