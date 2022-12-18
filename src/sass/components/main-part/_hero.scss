@@ -5,8 +5,7 @@
 .hero__background {
   @media screen and (min-width: 320px) {
     min-width: 320px;
-    height: 502px;
-
+    height: 465px;
     background-repeat: no-repeat;
     background-size: contain;
     background-position: 50% 100%;
@@ -24,7 +23,7 @@
 
   @include tablet {
     width: 768px;
-    height: 415px;
+    height: 369px;
     background-repeat: no-repeat;
     background-size: contain;
     background-position: 50% 100%;
@@ -41,7 +40,7 @@
 
   @include desktop {
     width: 1200px;
-    height: 664px;
+    height: 599px;
 
     background-repeat: no-repeat;
     background-size: contain;
@@ -107,7 +106,7 @@
 
   @media screen and (min-width: 320px) {
     margin-top: 32px;
-    margin-left: 20px;
+      margin-left: 20px;
   }
   @include tablet {
     margin-top: 24px;
@@ -230,18 +229,18 @@
 }
 
 .hero__picture {
-  display: flex;
-  gap: 12;
-  align-items: center;
-
-  margin-top: 42px;
-
-  @include tablet {
+   @include tablet {
+    display: flex;
+    align-items: center;
     gap: 32px;
+    margin-top: 12px;
   }
 
   @include desktop {
+    display: flex;
+    align-items: center;
     gap: 16px;
+    margin-top: 42px;
   }
 }
 
@@ -260,8 +259,8 @@
   }
 
   @include desktop {
-    width: 320px;
-    height: 320px;
+    width: 225px;
+    height: 225px;
     border-radius: 50%;
 
     margin-bottom: 65px;
@@ -299,16 +298,12 @@
   fill: $secondary-font-color;
 }
 
-// .hero__icecream {
-//   margin-top: 31px;
-// }
-
 .hero__right--side {
   @media screen and (min-width: 320px) {
     width: 177px;
     height: 217px;
     position: absolute;
-    top: 97%;
+    top: 113%;
     left: 28%;
   }
 
@@ -316,7 +311,7 @@
     width: 268px;
     height: 329px;
     position: absolute;
-    top: 14%;
+    top: 11%;
     left: 58%;
   }
 
@@ -324,7 +319,7 @@
     width: 456px;
     height: 560px;
     position: absolute;
-    top: 10%;
+    top: 7%;
     left: 57%;
   }
 }
