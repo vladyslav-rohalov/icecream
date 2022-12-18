@@ -87,5 +87,9 @@
 }
 
 .logo {
-    width: 60px;
+  width: 40px;
+
+  @include tablet {
+    width: 48px;
+  }
 }
