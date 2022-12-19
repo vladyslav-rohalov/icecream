@@ -50,6 +50,7 @@
 .overlay.active {
   opacity: 1;
   visibility: visible;
+  overflow: hidden;
 }
 
 /* Стили для кнопки закрытия */
