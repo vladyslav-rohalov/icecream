@@ -112,7 +112,7 @@
   position: relative;
   width: 280px;
   height: 280px;
-  margin-bottom: 62px;
+  margin: 0 auto 62px auto;
   background: linear-gradient(
       0deg,
       rgba(248, 210, 78, 0.7),
@@ -153,6 +153,7 @@
 }
 
 .about__text {
+    margin: 0 auto;
   width: 220px;
   font-style: normal;
   font-weight: 400;
