@@ -6,7 +6,7 @@ const throttle = require('lodash.throttle');
 
 import Swiper, { Pagination, Keyboard, Autoplay } from 'swiper';
 import '../node_modules/swiper/swiper.scss';
-import '../node_modules/swiper/modules/pagination/pagination.scss';
+//import '../node_modules/swiper/modules/pagination/pagination.scss';
 
 const swiper = new Swiper('[data-swiper="gallery"]', {
   modules: [Keyboard, Autoplay],

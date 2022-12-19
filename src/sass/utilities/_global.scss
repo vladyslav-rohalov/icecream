@@ -24,6 +24,7 @@ a {
   padding: 0;
   font-style: normal;
   text-decoration: none;
+  cursor: url('../images/Cursor.svg'), auto;
 }
 
 body {
@@ -36,6 +37,7 @@ body {
   background-size: contain;
   background-position: center;
   background-repeat: repeat-y;
+  cursor: url('../images/Cursor.svg'), auto;
 
   @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),

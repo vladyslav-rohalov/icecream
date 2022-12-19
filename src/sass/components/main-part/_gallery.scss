@@ -1,11 +1,26 @@
 .section-gallery {
   padding-bottom: 80px;
+  background: linear-gradient(
+    180deg,
+    $solid-bg-rgba 10%,
+    $transparent-bg-rgba 10%
+  );
 
   @media screen and (min-width: $tablet) {
     padding-bottom: 100px;
+    background: linear-gradient(
+      180deg,
+      rgba(132, 161, 120, 1) 14%,
+      rgba(255, 255, 255, 0) 14%
+    );
   }
   @media screen and (min-width: $desktop) {
     padding-bottom: 140px;
+    background: linear-gradient(
+      180deg,
+      rgba(132, 161, 120, 1) 5%,
+      rgba(255, 255, 255, 0) 5%
+    );
   }
 }
 
@@ -15,32 +30,17 @@
   padding-left: 20px;
   padding-right: 20px;
   max-width: 480px;
-  background: linear-gradient(
-    180deg,
-    $solid-bg-rgba 10%,
-    $transparent-bg-rgba 10%
-  );
 
   @media screen and (min-width: $tablet) {
     max-width: $tablet;
     padding-left: 32px;
     padding-right: 32px;
-    background: linear-gradient(
-      180deg,
-      rgba(132, 161, 120, 1) 14%,
-      rgba(255, 255, 255, 0) 14%
-    );
   }
 
   @media screen and (min-width: $desktop) {
     max-width: $desktop;
     padding-left: 93px;
     padding-right: 94px;
-    background: linear-gradient(
-      180deg,
-      rgba(132, 161, 120, 1) 5%,
-      rgba(255, 255, 255, 0) 5%
-    );
   }
 }
 
