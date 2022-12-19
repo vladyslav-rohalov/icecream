@@ -1,6 +1,5 @@
 .header {
   display: flex;
-  background-color: $solid-bg-color;
   align-items: center;
 
   padding-top: 12px;
@@ -8,6 +7,9 @@
   @include tablet {
     padding-top: 20px;
   }
+}
+.section__header {
+  background-color: $solid-bg-color;
 }
 
 .header_nav {
@@ -87,5 +89,5 @@
 }
 
 .logo {
-    width: 60px;
+  width: 60px;
 }
