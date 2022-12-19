@@ -113,7 +113,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // Numbers animation
 
-refs = {
+const refs = {
   animationEl: document.querySelector('.advantages__text'),
   numberPossFirst: document.querySelector('[data-number="1"]'),
   numberPossSecond: document.querySelector('[data-number="2"]'),
