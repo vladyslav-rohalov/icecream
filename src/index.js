@@ -63,6 +63,17 @@ const swiperReviews = new Swiper('[data-swiper="reviews"]', {
       });
 })(window.Element.prototype);
 
+const scrollController = {
+  disablesScroll() {
+    document.body.style.cssText = `
+    overflow: hidden;
+    `;
+  },
+  enabledScroll() {
+    document.body.style.cssText = '';
+  },
+};
+
 document.addEventListener('DOMContentLoaded', function () {
   /* Записываем в переменные массив элементов-кнопок и подложку.
       Подложке зададим id, чтобы не влиять на другие элементы с классом overlay*/
@@ -90,6 +101,7 @@ document.addEventListener('DOMContentLoaded', function () {
             подложке и окну чтобы показать их. */
       modalElem.classList.add('active');
       overlay.classList.add('active');
+      scrollController.disablesScroll();
     }); // end click
   }); // end foreach
 
@@ -99,6 +111,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
       parentModal.classList.remove('active');
       overlay.classList.remove('active');
+      scrollController.enabledScroll();
     });
   }); // end foreach
 
@@ -110,6 +123,7 @@ document.addEventListener('DOMContentLoaded', function () {
       if (key == 27) {
         document.querySelector('.modal.active').classList.remove('active');
         document.querySelector('.overlay').classList.remove('active');
+        scrollController.enabledScroll();
       }
     },
     false
@@ -118,6 +132,7 @@ document.addEventListener('DOMContentLoaded', function () {
   overlay.addEventListener('click', function () {
     document.querySelector('.modal.active').classList.remove('active');
     this.classList.remove('active');
+    scrollController.enabledScroll();
   });
 }); // end ready
 
