@@ -8,11 +8,8 @@ import Swiper, { Pagination, Keyboard, Autoplay } from 'swiper';
 import '../node_modules/swiper/swiper.scss';
 import '../node_modules/swiper/modules/pagination/pagination.scss';
 
-const swiper = new Swiper('.swiper', {
-  modules: [Pagination, Keyboard, Autoplay],
-  pagination: {
-    el: '.swiper-pagination',
-  },
+const swiper = new Swiper('[data-swiper="gallery"]', {
+  modules: [Keyboard, Autoplay],
   keyboard: {
     enabled: true,
   },
@@ -20,6 +17,19 @@ const swiper = new Swiper('.swiper', {
   autoplay: {
     delay: 3000,
   },
+  speed: 800,
+});
+
+const swiperReviews = new Swiper('[data-swiper="reviews"]', {
+  modules: [Pagination, Keyboard],
+  pagination: {
+    el: '.swiper-pagination',
+  },
+  keyboard: {
+    enabled: true,
+  },
+  loop: true,
+
   speed: 800,
 });
 
@@ -111,6 +121,7 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 }); // end ready
 
+//--------------------------------------------------------------------------------------
 // Numbers animation
 
 const refs = {
@@ -123,11 +134,11 @@ const refs = {
 const animationElHeight = refs.animationEl.offsetHeight;
 const animationElOffest = offset(refs.animationEl).top;
 
-console.log(
-  `Для анимации необходимо проскролить: ${
-    animationElOffest - window.innerHeight + animationElHeight - 1
-  }`
-);
+// console.log(
+//   `Для анимации необходимо проскролить: ${
+//     animationElOffest - window.innerHeight + animationElHeight - 1
+//   }`
+// );
 
 function offset(el) {
   const rect = el.getBoundingClientRect(),
@@ -141,7 +152,7 @@ const throttledOnScrollMouse = throttle(onScrollMouse, 1000);
 window.addEventListener('scroll', throttledOnScrollMouse);
 
 function onScrollMouse() {
-  console.log(`Проскролил px - ${scrollY}`);
+  // console.log(`Проскролил px - ${scrollY}`);
   if (
     scrollY <
     animationElOffest - window.innerHeight + animationElHeight - 1
