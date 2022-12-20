@@ -1,7 +1,15 @@
 .advantages {
-    padding: 50px 0 32px;
+    padding-bottom: 32px;
+    padding-top: 0;
     background-color: $solid-bg-color;
 
+    @include tablet {
+      padding-bottom: 60px;
+    }
+
+    @include desktop {
+        padding-bottom: 80px;
+    }
 }
 .advantages__list {
     @include tablet {
@@ -24,10 +32,6 @@
     }
     @include desktop {
         width: 368px;
-
-        // &:not(:last-child) {
-        //     margin-right: 32px;
-        // }
     }
 }
 .advantages__icon-bg {

@@ -1,4 +1,5 @@
 .contacts {
+  padding-top: 40px;
   background-image: url(../images/general/mobile-bg.jpg);
   background: linear-gradient(360deg, #84a178 75%, transparent 50%);
   @include retina2x {
@@ -7,6 +8,8 @@
   }
 
   @include tablet {
+    padding-top: 80px;
+    padding-bottom: 40px;
     background-image: url(../images/general/tablet-bg.jpg);
     background: linear-gradient(360deg, #84a178 50%, transparent 50%);
     @include retina2x {
@@ -15,11 +18,13 @@
     }
   }
   @include desktop {
+    padding-top: 100px;
+    padding-bottom: 60px;
     background-image: url(../images/general/desktop-bg.jpg);
-    background: linear-gradient(360deg, #84a178 80%, transparent 50%);
+    background: linear-gradient(360deg, #84a178 70%, transparent 50%);
     @include retina2x {
       background-image: url(../images/general/desktop-bg@2x.jpg);
-      background: linear-gradient(360deg, #84a178 80%, transparent 50%);
+      background: linear-gradient(360deg, #84a178 70%, transparent 50%);
     }
   }
 }
@@ -231,7 +236,7 @@
 }
 
 .contacts__buttons {
-  margin-bottom: 60px;
+  // margin-bottom: 60px;
   @include tablet {
     display: flex;
     justify-content: center;
