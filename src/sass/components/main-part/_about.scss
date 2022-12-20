@@ -6,7 +6,6 @@
     padding-bottom: 60px;
   }
 }
-
 .backdrop {
   position: fixed;
   top: 0;
@@ -17,13 +16,38 @@
   opacity: 1;
   visibility: visible;
   transition: 450ms;
-  z-index: 999;
 }
 
 .backdrop.is-hidden {
   visibility: hidden;
   opacity: 0;
   pointer-events: none;
+}
+
+.about_modal_close-but {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+
+  @include tablet {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.about_modal_close-icon {
+  width: 11px;
+  height: 11px;
+
+  @include tablet {
+    width: 20px;
+    height: 20px;
+  }
 }
 
 .about_modal_close-but {
@@ -259,7 +283,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
 
-  @media screen and (min-width: $tablet) {
+  @include tablet {
     width: 568px;
   }
 }
@@ -280,7 +304,7 @@
 
   color: #131313;
 
-  @media screen and (min-width: $tablet) {
+  @include tablet {
     margin-top: 32px;
     font-size: 20px;
     line-height: 1.4;
@@ -293,7 +317,7 @@
   width: 224px;
   height: 199px;
 
-  @media screen and (min-width: $tablet) {
+  @include tablet {
     margin-top: 32px;
     width: 448px;
     height: 205px;
@@ -314,7 +338,7 @@
 
   color: #131313;
 
-  @media screen and (min-width: $tablet) {
+  @include tablet {
     margin-top: 32px;
     margin-bottom: 32px;
     width: 448px;
