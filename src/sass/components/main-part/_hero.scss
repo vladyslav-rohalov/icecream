@@ -2,7 +2,7 @@
   @media screen and (min-width: 320px) {
     min-width: 320px;
     height: 403px;
-    background-repeat: no-repeat;
+    background-repeat: repeat-x;
     background-size: contain;
     background-position: 50% 100%;
 
@@ -12,7 +12,6 @@
       (min-resolution: 192dpi),
       (min-resolution: 2dppx) {
       background-image: url(../images/hero/mobile-dot@2x.png);
-      margin-top: 452px;
     }
     background-color: $solid-bg-color;
   }
@@ -113,7 +112,7 @@
   display: flex;
   gap: 12px;
   align-items: center;
- 
+
   @media screen and (min-width: 320px) {
     margin-top: 32px;
     margin-left: 20px;
@@ -143,7 +142,6 @@
   font-weight: 600;
 
   transition: border-color ease-in-out, color ease-in-out;
-  cursor: pointer;
 
   @media screen and (min-width: 320px) {
     width: 108px;
@@ -152,8 +150,6 @@
 
     font-size: 12px;
     line-height: calc(15 / 12);
-
-    
 
     &:hover {
       border-color: $btn-hover-bg;
@@ -202,7 +198,7 @@
   border: solid transparent;
   background-color: transparent;
 
-  text-align: center;  
+  text-align: center;
   align-items: center;
   color: $accent-color;
   text-decoration: underline;
@@ -210,7 +206,6 @@
   font-weight: 600;
 
   transition: color ease-in-out;
-  cursor: pointer;
 
   @media screen and (min-width: 320px) {
     width: 114px;
@@ -270,9 +265,11 @@
   @include desktop {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 16px;
-    margin-top: 42px;
+    margin-top: 85px;
   }
+
   @media screen and (max-width: 767px) {
     display: none;
   }
@@ -287,17 +284,12 @@
     width: 152px;
     height: 152px;
     border-radius: 50%;
-
-    margin-bottom: 12px;
-    margin-left: 32px;
   }
 
   @include desktop {
     width: 225px;
     height: 225px;
     border-radius: 50%;
-
-    margin-bottom: 65px;
   }
 }
 
@@ -333,7 +325,6 @@
 }
 .hero__icon {
   fill: $secondary-font-color;
-  
 }
 
 .hero__right--side {
@@ -383,6 +374,19 @@
 
   @include desktop {
     margin-top: 53px;
+  }
+}
+.hero__iteam {
+  @include tablet {
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+  }
+
+  @include desktop {
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
   }
 }
 
