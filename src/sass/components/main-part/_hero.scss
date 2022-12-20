@@ -113,7 +113,7 @@
   display: flex;
   gap: 12px;
   align-items: center;
- 
+
   @media screen and (min-width: 320px) {
     margin-top: 32px;
     margin-left: 20px;
@@ -152,8 +152,6 @@
 
     font-size: 12px;
     line-height: calc(15 / 12);
-
-    
 
     &:hover {
       border-color: $btn-hover-bg;
@@ -202,7 +200,7 @@
   border: solid transparent;
   background-color: transparent;
 
-  text-align: center;  
+  text-align: center;
   align-items: center;
   color: $accent-color;
   text-decoration: underline;
@@ -333,7 +331,6 @@
 }
 .hero__icon {
   fill: $secondary-font-color;
-  
 }
 
 .hero__right--side {
@@ -420,5 +417,47 @@
   @include desktop {
     font-size: 14px;
     line-height: calc(17 / 14);
+  }
+}
+
+.scale-up-bottom {
+  animation: scale-up-bottom 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+@keyframes scale-up-bottom {
+  0% {
+    transform: scale(0.5);
+    transform-origin: 50% 100%;
+  }
+  100% {
+    transform: scale(1);
+    transform-origin: 50% 100%;
+  }
+}
+.slide-in-left {
+  animation: slide-in-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+@keyframes slide-in-left {
+  0% {
+    transform: translateX(-1000px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.scale-in-top {
+  animation: scale-in-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+@keyframes scale-in-top {
+  0% {
+    transform: scale(0);
+    transform-origin: 50% 0;
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    transform-origin: 50% 0;
+    opacity: 1;
   }
 }
