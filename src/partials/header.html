@@ -45,7 +45,11 @@
               <li class="mobile_list"><a href="" class="mobile_link link">Contact</a></li>
             </ul>
             <div class="btn_header">
-              <button class="header_bt-menu" type="button">Buy now 
+              <button 
+              class="header_bt-menu js-open-modal"
+              data-modal="openBuyNow" 
+              type="button"
+              data-modal-open>Buy now 
                 <svg class="icon_arrow" width="12" height="12">
                   <use href="./images/icons.svg#icon-arrow-short"></use>
                 </svg>
@@ -57,11 +61,70 @@
             integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
             crossorigin="anonymous"
           ></script>
-          <script defer src="menu-mobile.js"></script>
           </div>
-         <button class="header_bt" type="button">Buy now 
-          <svg class="icon_arrow" width="12" height="12">
-            <use href="./images/icons.svg#icon-arrow-short"></use>
-          </svg>
+         <button 
+         class="header_bt js-open-modal" 
+         data-modal="openBuyNow"
+         type="button">
+         Buy now 
+          <svg class="icon_modal" width="12" height="12" data-modal-open>
+                  <use href="./images/icons.svg#icon-arrow-short"></use>
+              </svg>
          </button>
+         <div 
+         class="modal" 
+         data-modal="openBuyNow">
+          <svg class="modalcross js-modal-close">
+            <use class="" href="./images/icons.svg#icon-arrow-short"></use>
+          </svg>
+          <p class="">Buy now</p>
+        <!-- <ul class="list buy-product"> -->
+          <ul class="list products__list-modal">
+            <li class="products__buy nutrition__item">
+              <h3 class="products__name">ice cream</h3>
+            </li>
+            <li class="products__buy">
+              <h3 class="products__name">ice coffee</h3>
+            </li>
+            <li class="products__buy">
+              <h3 class="products__name">milkshakes</h3>
+            </li>
+          </ul>
+          <form class="products-modal__form">
+            <label class="products-modal__label">
+              <input
+                type="text"
+                name="name"
+                placeholder="Name"
+                class="products-modal__field products-modal__input"
+              />
+            </label>
+      
+            <label class="products-modal__label">
+              <input
+                type="tel"
+                name="tel"
+                placeholder="Phone"
+                class="products-modal__field products-modal__input"
+              />
+            </label>
+      
+            <label class="products-modal__label">
+              <textarea
+                name="comment"
+                placeholder="Comment"
+                class="products-modal__field products-modal__comment"
+              ></textarea>
+            </label>
+      
+            <button
+              type="submit"
+              title="Відправити"
+              class="products-modal__btn--submit"
+            >
+              Submit
+            </button>
+          </form>
+        </div>
     </header>
+    <script defer src="menu-mobile.js"></script>

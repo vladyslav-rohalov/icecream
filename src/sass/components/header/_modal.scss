@@ -19,6 +19,7 @@
 
 .modal {
   /* Скрываем окна  */
+  z-index: 11111111;
   opacity: 0;
   visibility: hidden;
 
