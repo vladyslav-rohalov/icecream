@@ -1,8 +1,8 @@
 .hero {
   @media screen and (min-width: 320px) {
-    min-width: 320px;
+    width: 320px;
     height: 403px;
-    background-repeat: repeat-x;
+    background-repeat: no-repeat;
     background-size: contain;
     background-position: 50% 100%;
 
