@@ -54,17 +54,20 @@
   }
 
 
-  @keyframes tracking-in-expand {
+  @keyframes slide-in-elliptic-right-fwd {
     0% {
-      letter-spacing: -0.5em;
+      -webkit-transform: translateX(800px) rotateY(-30deg) scale(0);
+      transform: translateX(800px) rotateY(-30deg) scale(0);
+      -webkit-transform-origin: -100% 50%;
+      transform-origin: -100% 50%;
       opacity: 0;
     }
   
-    40% {
-      opacity: 0.6;
-    }
-  
     100% {
+      -webkit-transform: translateX(0) rotateY(0) scale(1);
+      transform: translateX(0) rotateY(0) scale(1);
+      -webkit-transform-origin: -1800px 50%;
+      transform-origin: -1800px 50%;
       opacity: 1;
     }
   }
