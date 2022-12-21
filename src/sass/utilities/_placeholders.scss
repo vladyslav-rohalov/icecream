@@ -12,7 +12,6 @@
   background-color: $btn-default-color;
   border-radius: $btn-border-radius;
   border: none;
-  cursor: pointer;
   transition: background-color 300ms ease-in-out;
 
   &:hover {
@@ -43,7 +42,6 @@
   background-color: transparent;
   border: 2px solid $btn-default-color;
   border-radius: $btn-border-radius;
-  cursor: pointer;
 
   &:hover {
     border: 2px solid $btn-hover-bg;
