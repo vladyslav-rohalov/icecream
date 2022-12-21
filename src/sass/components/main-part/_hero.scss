@@ -120,9 +120,11 @@
   }
   @include tablet {
     margin-top: 24px;
+    margin-left: 0;
   }
   @include desktop {
     margin-top: 28px;
+    margin-left: 0;
   }
 }
 
@@ -192,6 +194,11 @@
       color: $secondary-font-color;
       animation: shake-top 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
     }
+
+    &:disabled {
+      border-color: $btn-disabled-color;
+      color: $button-text-color;
+    }
   }
 }
 
@@ -226,6 +233,10 @@
     &:focus {
       color: $secondary-font-color;
     }
+
+    &:disabled {
+      color: $btn-disabled-color;
+      }
   }
   @include tablet {
     width: 114px;
@@ -241,6 +252,10 @@
     &:focus {
       color: $secondary-font-color;
     }
+
+    &:disabled {
+      color: $btn-disabled-color;
+      }
   }
   @include desktop {
     width: 154px;
@@ -255,6 +270,11 @@
 
     &:focus {
       color: $secondary-font-color;
+    }
+
+    
+    &:disabled {
+    color: $btn-disabled-color;
     }
   }
 }
