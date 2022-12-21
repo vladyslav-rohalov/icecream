@@ -15,10 +15,10 @@
         <!-- <img class="logo" src="./images/header/logo/l_60.png" alt="logo"> -->
         <nav>
           <ul class="header_nav">
-            <li class="header_nav-list"><a class="header_nav-link" href="">Home</a></li>
-            <li class="header_nav-list"><a class="header_nav-link" href="">How it’s made?</a></li>
-            <li class="header_nav-list"><a class="header_nav-link" href="">Our products</a></li>
-            <li class="header_nav-list"><a class="header_nav-link" href="">Contact</a></li>
+            <li class="header_nav-list"><a class="header_nav-link" href="#home">Home</a></li>
+            <li class="header_nav-list"><a class="header_nav-link" href="#how-it-is-made">How it’s made?</a></li>
+            <li class="header_nav-list"><a class="header_nav-link" href="#our-products">Our products</a></li>
+            <li class="header_nav-list"><a class="header_nav-link" href="#contacts">Contact</a></li>
           </ul>
         </nav>
         <div class="header_mobile_menu">
@@ -39,10 +39,10 @@
               </svg>
             </button>
             <ul class="mobile-menu">
-              <li class="mobile_list"><a href="" class="mobile_link link">Home</a></li>
-              <li class="mobile_list"><a href="" class="mobile_link link">How it’s made?</a></li>
-              <li class="mobile_list"><a href="" class="mobile_link link">Our products</a></li>
-              <li class="mobile_list"><a href="" class="mobile_link link">Contact</a></li>
+              <li class="mobile_list"><a href="#home" class="mobile_link link">Home</a></li>
+              <li class="mobile_list"><a href="#how-it-is-made" class="mobile_link link">How it’s made?</a></li>
+              <li class="mobile_list"><a href="#our-products" class="mobile_link link">Our products</a></li>
+              <li class="mobile_list"><a href="#contacts" class="mobile_link link">Contact</a></li>
             </ul>
             <div class="btn_header">
               <button 
@@ -74,20 +74,19 @@
          <div 
          class="modal" 
          data-modal="openBuyNow">
-          <svg class="modalcross js-modal-close">
-            <use class="" href="./images/icons.svg#icon-arrow-short"></use>
+          <svg class="modal__cross js-modal-close" width="24" height="24">
+            <use class="" href="./images/icons.svg#icon-close-modal20"></use>
           </svg>
-          <p class="">Buy now</p>
-        <!-- <ul class="list buy-product"> -->
-          <ul class="list products__list-modal">
-            <li class="products__buy nutrition__item">
-              <h3 class="products__name">ice cream</h3>
+          <p class="header_modal-title">Buy now</p>
+          <ul class="list products__list-header">
+            <li class="products__item-header">
+              <h3 class="products__name-header">ice cream</h3>
             </li>
-            <li class="products__buy">
-              <h3 class="products__name">ice coffee</h3>
+            <li class="products__item-header">
+              <h3 class="products__name-header">ice coffee</h3>
             </li>
-            <li class="products__buy">
-              <h3 class="products__name">milkshakes</h3>
+            <li class="products__item-header">
+              <h3 class="products__name-header">milkshakes</h3>
             </li>
           </ul>
           <form class="products-modal__form">
