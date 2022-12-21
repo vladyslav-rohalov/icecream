@@ -37,3 +37,34 @@
       transform: rotate(2deg);
     }
   }
+
+
+  @keyframes roll-in-left {
+    0% {
+      -webkit-transform: translateX(-800px) rotate(-540deg);
+      transform: translateX(-800px) rotate(-540deg);
+      opacity: 0;
+    }
+  
+    100% {
+      -webkit-transform: translateX(0) rotate(0deg);
+      transform: translateX(0) rotate(0deg);
+      opacity: 1;
+    }
+  }
+
+
+  @keyframes tracking-in-expand {
+    0% {
+      letter-spacing: -0.5em;
+      opacity: 0;
+    }
+  
+    40% {
+      opacity: 0.6;
+    }
+  
+    100% {
+      opacity: 1;
+    }
+  }
