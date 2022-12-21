@@ -264,10 +264,12 @@
   border-color: transparent;
   &:hover {
     background-color: #0a8817;
+    animation: shake-top 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
   }
   &:focus {
     background-color: #0a8817;
     color: #ffffff;
+    animation: shake-top 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
   }
   &:disabled {
     background-color: #ababab;
@@ -297,10 +299,12 @@
   border: 2px solid #f8d24e;
   &:hover {
     border: 2px solid #0a8817;
+    animation: shake-top 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
   }
   &:focus {
     border: 2px solid #0a8817;
     color: #ffffff;
+    animation: shake-top 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
   }
   &:disabled {
     border: 2px solid #ababab;
