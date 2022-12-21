@@ -3,7 +3,7 @@ const throttle = require('lodash.throttle');
 
 //Swiper
 //-------------------------------------------------------------------------------------
-
+import './js/header-scroll';
 import Swiper, { Pagination, Keyboard, Autoplay } from 'swiper';
 import '../node_modules/swiper/swiper.scss';
 //import '../node_modules/swiper/modules/pagination/pagination.scss';
