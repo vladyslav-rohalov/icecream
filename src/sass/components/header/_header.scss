@@ -5,11 +5,26 @@
   padding-top: 12px;
 
   @include tablet {
-    padding-top: 20px;
+    padding-top: 20px 32px 10px 32px;
+  }
+
+  @include desktop {
+    padding: 20px 16px;
   }
 }
 .section__header {
   background-color: $solid-bg-color;
+
+  @include tablet {
+    position: fixed;
+    width:100%;
+    z-index: 10;
+    
+  &.no-transparency {
+    background-color: rgba(132, 161, 120, 0.5);
+    backdrop-filter: blur(4px);
+  }
+ }
 }
 
 .header_nav {
