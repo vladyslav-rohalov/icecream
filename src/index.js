@@ -1,4 +1,5 @@
 // Throttle
+//------------------------------------------------------------------------------------
 const throttle = require('lodash.throttle');
 
 //Swiper
@@ -24,12 +25,12 @@ const swiperReviews = new Swiper('[data-swiper="reviews"]', {
   modules: [Pagination, Keyboard],
   pagination: {
     el: '.swiper-pagination',
+    clickable: true,
   },
   keyboard: {
     enabled: true,
   },
   loop: true,
-
   speed: 800,
 });
 
