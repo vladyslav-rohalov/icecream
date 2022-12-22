@@ -322,6 +322,7 @@
 .modal-locations {
   width: 280px;
   height: 365px;
+
   @include tablet {
     width: 568px;
     height: 458px;
@@ -331,6 +332,7 @@
 .modal-franchise {
   width: 280px;
   height: 674px;
+
   @include tablet {
     width: 568px;
     height: 668px;

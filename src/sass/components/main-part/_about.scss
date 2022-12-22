@@ -118,7 +118,7 @@
 
 .about__text {
   margin: 0 auto;
-  width: 220px;
+  padding: 0 35px;
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
@@ -129,6 +129,7 @@
 
   @include tablet {
     width: 320px;
+    padding: 0px;
     text-align: left;
     letter-spacing: 0.04em;
   }
