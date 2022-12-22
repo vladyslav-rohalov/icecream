@@ -22,6 +22,10 @@
   z-index: 11111111;
   opacity: 0;
   visibility: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transition: all 0.8s ease 0s;
+
 
   /*  Установаем ширину окна  */
   width: 280px;
@@ -96,10 +100,10 @@
 }
 
 .products__list-header {
-  display: block;
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
-  text-align: center;
+  gap: 82px;
 
   // gap: 168px;
   // margin-top: 148px;
@@ -118,12 +122,12 @@
   position: relative;
   margin-bottom: 32px;
 
+  width: 132px;
+  height: 136px;
+
   @include tablet {
     padding-top: 95px;
     margin-bottom: 40px;
-
-    width: 132px;
-    height: 135px;
   }
 
   border-radius: 24px;
@@ -131,16 +135,21 @@
   background-size: contain;
 
   &:nth-child(1) {
+    margin-top: 86px;
     border: 2px solid #96AF8C;
     filter: drop-shadow(0px 5.26027px 19.726px rgba(212, 20, 67, 0.1));
-  border-radius: 15px;
+    border-radius: 15px;
+
+    @include tablet {
+      margin-top: 0px;
+    }
 }
 
   &:nth-child(2) {
     background: #EFD478;
-  border: 2px solid #EFD478;
-  box-shadow: 0px 5.26027px 19.726px rgba(212, 20, 67, 0.1);
-  border-radius: 15px;
+    border: 2px solid #EFD478;
+    box-shadow: 0px 5.26027px 19.726px rgba(212, 20, 67, 0.1);
+    border-radius: 15px;
 }
 
   &:nth-child(3) {
@@ -154,7 +163,7 @@
   &::before {
     content: '';
     position: absolute;
-    top: -86%;
+    top: -100%;
     left: 50%;
     transform: translate(-50%, 50%);
 
@@ -189,7 +198,7 @@
   &::after {
     content: '';
     position: absolute;
-    top: -49%;
+    top: -107%;
     left: 50%;
     transform: translate(-50%, 50%);
 
@@ -205,6 +214,7 @@
 
     background-position: center;
     background-size: contain;
+    background-repeat: no-repeat;
 
     border-radius: 50%;
   }
@@ -238,6 +248,7 @@
 .products__name-header {
   padding-bottom: 40px;
   margin-bottom: 20px;
+  padding-top: 86px;
 
   color: $primary-font-color;
 
@@ -248,6 +259,7 @@
   text-transform: uppercase;
 
   @include tablet {
+    padding-top: 0;
     font-size: 16px;
   }
 }
