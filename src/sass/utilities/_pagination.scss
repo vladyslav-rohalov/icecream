@@ -63,7 +63,7 @@
     appearance: none;
   }
   .swiper-pagination-clickable & {
-    cursor: pointer;
+    cursor: url('../images/Cursor.svg'), auto;
   }
 
   &:only-child {
