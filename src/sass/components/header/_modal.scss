@@ -20,11 +20,10 @@
 .modal {
   /* Скрываем окна  */
 
-  z-index: 11111111;
+  z-index: 1;
   opacity: 0;
   visibility: hidden;
   overflow-y: auto;
-  overflow-x: hidden;
   transition: all 0.8s ease 0s;
 
 
