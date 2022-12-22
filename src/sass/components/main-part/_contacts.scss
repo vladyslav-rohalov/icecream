@@ -1,30 +1,30 @@
 .contacts {
   padding-top: 40px;
   background-image: url(../images/general/mobile-bg.jpg);
-  background: linear-gradient(360deg, #84a178 75%, transparent 50%);
+  background: linear-gradient(360deg, $solid-bg-color 75%, transparent 50%);
   @include retina2x {
     background-image: url(../images/general/mobile-bg@2x.jpg);
-    background: linear-gradient(360deg, #84a178 75%, transparent 50%);
+    background: linear-gradient(360deg, $solid-bg-color 75%, transparent 50%);
   }
 
   @include tablet {
     padding-top: 80px;
     padding-bottom: 40px;
     background-image: url(../images/general/tablet-bg.jpg);
-    background: linear-gradient(360deg, #84a178 50%, transparent 50%);
+    background: linear-gradient(360deg, $solid-bg-color 50%, transparent 50%);
     @include retina2x {
       background-image: url(../images/general/tablet-bg@2x.jpg);
-      background: linear-gradient(360deg, #84a178 50%, transparent 50%);
+      background: linear-gradient(360deg, $solid-bg-color 50%, transparent 50%);
     }
   }
   @include desktop {
     padding-top: 100px;
     padding-bottom: 60px;
     background-image: url(../images/general/desktop-bg.jpg);
-    background: linear-gradient(360deg, #84a178 70%, transparent 50%);
+    background: linear-gradient(360deg, $solid-bg-color 70%, transparent 50%);
     @include retina2x {
       background-image: url(../images/general/desktop-bg@2x.jpg);
-      background: linear-gradient(360deg, #84a178 70%, transparent 50%);
+      background: linear-gradient(360deg, $solid-bg-color 70%, transparent 50%);
     }
   }
 }
@@ -48,7 +48,7 @@
   margin-bottom: 16px;
   padding-left: 32px;
   padding-right: 32px;
-  background-color: #fcfcfc;
+  background-color: $secondary-font-color;
   box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
   border-radius: 24px;
   &:last-child {
@@ -83,8 +83,8 @@
   line-height: calc(14px / 12px);
   letter-spacing: 0.04em;
 
-  color: #131313;
-  background-color: #f8d24e;
+  color: $primary-font-color;
+  background-color: $btn-default-color;
   border-radius: 4px;
   @include tablet {
     margin-bottom: 36px;
@@ -142,7 +142,7 @@
   line-height: calc(22px / 12px);
   letter-spacing: 0.04em;
   background-color: transparent;
-  color: #d6936d;
+  color: $card-bg-color3;
   @include tablet {
     margin-bottom: 32px;
     font-size: 14px;
@@ -187,7 +187,7 @@
 .contacts__time {
   font-size: 12px;
   line-height: calc(22px / 12px);
-  color: #ababab;
+  color: $btn-disabled-color;
   @include tablet {
     font-size: 14px;
     line-height: calc(26px / 14px);
@@ -203,7 +203,7 @@
   padding: 0;
   margin: 0 0 6px;
   background-color: transparent;
-  color: #131313;
+  color: $primary-font-color;
   font-size: 12px;
   line-height: calc(19px / 12px);
   @include tablet {
@@ -222,7 +222,7 @@
   padding: 0;
   margin: 0;
   background-color: transparent;
-  color: #131313;
+  color: $primary-font-color;
   font-size: 12px;
   line-height: calc(19px / 12px);
   @include tablet {
@@ -258,21 +258,21 @@
   font-weight: 600;
   font-size: 14px;
   line-height: calc(18px / 14px);
-  color: #131313;
-  background-color: #f8d24e;
+  color: $primary-font-color;
+  background-color: $btn-default-color;
   border-radius: 10px;
   border-color: transparent;
   &:hover {
-    background-color: #0a8817;
-    animation: shake-top 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+    background-color: $btn-hover-bg;
+    animation: shake-top 0.8s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
   }
   &:focus {
-    background-color: #0a8817;
-    color: #ffffff;
-    animation: shake-top 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+    background-color: $btn-hover-bg;
+    color: $button-light-color;
+    animation: shake-top 0.8s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
   }
   &:disabled {
-    background-color: #ababab;
+    background-color: $btn-disabled-color;
   }
   @include tablet {
     margin: 0;
@@ -293,21 +293,21 @@
   font-weight: 600;
   font-size: 14px;
   line-height: calc(18px / 14px);
-  color: #000000;
+  color: $button-text-color;
   background-color: transparent;
   border-radius: 10px;
-  border: 2px solid #f8d24e;
+  border: 2px solid $btn-default-color;
   &:hover {
-    border: 2px solid #0a8817;
-    animation: shake-top 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+    border: 2px solid $btn-hover-bg;
+    animation: shake-top 0.8s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
   }
   &:focus {
-    border: 2px solid #0a8817;
-    color: #ffffff;
-    animation: shake-top 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+    border: 2px solid $btn-hover-bg;
+    color: $button-light-color;
+    animation: shake-top 0.8s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
   }
   &:disabled {
-    border: 2px solid #ababab;
+    border: 2px solid $btn-disabled-color;
   }
   @include tablet {
     margin: 0;
@@ -319,47 +319,14 @@
   height: 12px;
 }
 
-.modal-locations {
-  width: 280px;
-  height: 365px;
-
-  @include tablet {
-    width: 568px;
-    height: 458px;
-  }
-}
-
-.modal-franchise {
-  width: 280px;
-  height: 674px;
-
-  @include tablet {
-    width: 568px;
-    height: 668px;
-  }
-}
-
-.modal__cross {
-  width: 20px;
-  height: 20px;
-  right: 12px;
-  top: 12px;
-}
-
-.modal__title {
+.contacts-modal__title {
   margin-bottom: 20px;
-  font-family: 'Seymour One';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: calc(24px / 16px);
-  text-align: center;
-  color: #131313;
+
   @include tablet {
     margin-right: auto;
     margin-left: auto;
+    margin-bottom: 24px;
     width: 322px;
-    margin-bottom: 32px;
     font-size: 20px;
     line-height: calc(28px / 20px);
   }
@@ -379,18 +346,16 @@
   }
 }
 
-.modal__btn {
+.contacts-modal__btn {
+  @extend %btn;
+  margin-left: auto;
+  margin-right: auto;
   padding: 12px 34px;
-  margin-bottom: 28px;
   font-weight: 600;
   font-size: 12px;
   line-height: calc(15px / 12px);
-  color: #131313;
-  background-color: #f8d24e;
-  border-radius: 10px;
-  border-color: transparent;
+
   @include tablet {
-    margin-bottom: 32px;
     font-size: 14px;
     line-height: calc(17px / 14px);
   }
@@ -398,18 +363,22 @@
 
 .modal__description {
   margin-bottom: 24px;
+  text-align: left;
   font-size: 14px;
   line-height: calc(20px / 14px);
 
   @include tablet {
     margin-bottom: 32px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 448px;
     font-size: 16px;
     line-height: calc(22px / 16px);
   }
 }
 
 ::-webkit-input-placeholder {
-  color: #131313;
+  color: $primary-font-color;
 }
 .text-input {
   width: 100%;
@@ -418,11 +387,17 @@
   padding-left: 12px;
   padding-bottom: 7px;
   background-color: rgba(248, 210, 78, 0.1);
-  border: 1px solid #84a178;
+  border: 1px solid $solid-bg-color;
   border-radius: 10px;
-
   font-size: 12px;
   line-height: calc(17px / 12px);
+  transition: border 300ms ease-in-out;
+
+  &:focus {
+    border: 1px solid $accent-color;
+    outline: none;
+  }
+
   @include tablet {
     width: 368px;
     margin-bottom: 16px;
@@ -438,11 +413,18 @@
   padding-left: 12px;
   padding-bottom: 24px;
   background-color: rgba(248, 210, 78, 0.1);
-  border: 1px solid #84a178;
+  border: 1px solid $solid-bg-color;
   border-radius: 10px;
   font-size: 12px;
   line-height: calc(17px / 12px);
   resize: none;
+  transition: border 300ms ease-in-out;
+
+  &:focus {
+    border: 1px solid $accent-color;
+    outline: none;
+  }
+
   @include tablet {
     width: 368px;
     margin-bottom: 32px;
