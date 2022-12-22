@@ -1,4 +1,4 @@
-<section class="section products">
+<section class="section products" id="our-products">
   <div class="container">
     <p class="products__desc">100% natural</p>
     <h2 class="products__title">products</h2>
@@ -62,30 +62,39 @@
 
 <section>
   <div class="modal products-modal" data-modal="openModalProducts">
-    <svg class="modal__cross js-modal-close">
-      <use class="" href="./images/icons.svg#icon-close-modal20"></use>
-    </svg>
-    <p class="modal__title products-modal__title">Chololate icecream</p>
+    <button type="button" class="modal__button js-modal-close">
+      <svg class="modal__cross">
+        <use class="" href="./images/icons.svg#icon-close-modal20"></use>
+      </svg>
+    </button>
+
+    <p class="products-modal__title">Chololate icecream</p>
+
     <ul class="list nutrition">
       <li class="nutrition__item">
         <span class="nutrition__value">320</span>
         <span class="nutrition__desc">kcal</span>
       </li>
+
       <li class="nutrition__item">
         <span class="nutrition__value">4g</span>
         <span class="nutrition__desc nutrition__desc--short">Prote...</span>
         <span class="nutrition__desc nutrition__desc--long">Protein...</span>
       </li>
+
       <li class="nutrition__item">
         <span class="nutrition__value">8,2g</span>
         <span class="nutrition__desc">Fats</span>
       </li>
+
       <li class="nutrition__item">
         <span class="nutrition__value">40,4g</span>
         <span class="nutrition__desc">Carbs</span>
       </li>
     </ul>
+
     <p class="products-modal__ingredients-title">Ingredients</p>
+
     <ul class="list ingredients">
       <li class="ingredients__item">
         <span class="ingredients__name">Milk</span>
@@ -117,6 +126,7 @@
         <span class="ingredients__value">10g</span>
       </li>
     </ul>
+
     <form class="products-modal__form">
       <label class="products-modal__label">
         <input

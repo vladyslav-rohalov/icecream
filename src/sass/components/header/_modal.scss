@@ -72,19 +72,27 @@
 
 /* Стили для кнопки закрытия */
 
-.modal__cross {
-  width: 20px;
-  height: 20px;
+.modal__button {
   position: absolute;
   top: 16px;
   right: 16px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  border: none;
+  background-color: transparent;
+}
+
+.modal__cross {
+  width: 20px;
+  height: 20px;
+
   fill: $primary-font-color;
-  cursor: pointer;
   transition: fill 300ms ease-in-out;
 
   &:hover,
   &:focus {
-    fill: $accent-color;
+    fill: $btn-hover-bg;
   }
 }
 

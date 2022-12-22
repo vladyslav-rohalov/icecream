@@ -1,18 +1,16 @@
 // Throttle
+//------------------------------------------------------------------------------------
 const throttle = require('lodash.throttle');
 
 //Swiper
 //-------------------------------------------------------------------------------------
-
+import './js/header-scroll';
 import Swiper, { Pagination, Keyboard, Autoplay } from 'swiper';
 import '../node_modules/swiper/swiper.scss';
-import '../node_modules/swiper/modules/pagination/pagination.scss';
+//import '../node_modules/swiper/modules/pagination/pagination.scss';
 
-const swiper = new Swiper('.swiper', {
-  modules: [Pagination, Keyboard, Autoplay],
-  pagination: {
-    el: '.swiper-pagination',
-  },
+const swiper = new Swiper('[data-swiper="gallery"]', {
+  modules: [Keyboard, Autoplay],
   keyboard: {
     enabled: true,
   },
@@ -20,6 +18,19 @@ const swiper = new Swiper('.swiper', {
   autoplay: {
     delay: 3000,
   },
+  speed: 800,
+});
+
+const swiperReviews = new Swiper('[data-swiper="reviews"]', {
+  modules: [Pagination, Keyboard],
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+  keyboard: {
+    enabled: true,
+  },
+  loop: true,
   speed: 800,
 });
 
@@ -53,6 +64,17 @@ const swiper = new Swiper('.swiper', {
       });
 })(window.Element.prototype);
 
+const scrollController = {
+  disablesScroll() {
+    document.body.style.cssText = `
+    overflow: hidden;
+    `;
+  },
+  enabledScroll() {
+    document.body.style.cssText = '';
+  },
+};
+
 document.addEventListener('DOMContentLoaded', function () {
   /* Записываем в переменные массив элементов-кнопок и подложку.
       Подложке зададим id, чтобы не влиять на другие элементы с классом overlay*/
@@ -80,6 +102,7 @@ document.addEventListener('DOMContentLoaded', function () {
             подложке и окну чтобы показать их. */
       modalElem.classList.add('active');
       overlay.classList.add('active');
+      scrollController.disablesScroll();
     }); // end click
   }); // end foreach
 
@@ -89,6 +112,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
       parentModal.classList.remove('active');
       overlay.classList.remove('active');
+      scrollController.enabledScroll();
     });
   }); // end foreach
 
@@ -100,6 +124,7 @@ document.addEventListener('DOMContentLoaded', function () {
       if (key == 27) {
         document.querySelector('.modal.active').classList.remove('active');
         document.querySelector('.overlay').classList.remove('active');
+        scrollController.enabledScroll();
       }
     },
     false
@@ -108,13 +133,15 @@ document.addEventListener('DOMContentLoaded', function () {
   overlay.addEventListener('click', function () {
     document.querySelector('.modal.active').classList.remove('active');
     this.classList.remove('active');
+    scrollController.enabledScroll();
   });
 }); // end ready
 
+//--------------------------------------------------------------------------------------
 // Numbers animation
 
-refs = {
-  animationEl: document.querySelector('.animation'),
+const refs = {
+  animationEl: document.querySelector('.advantages__text'),
   numberPossFirst: document.querySelector('[data-number="1"]'),
   numberPossSecond: document.querySelector('[data-number="2"]'),
   numberPossThird: document.querySelector('[data-number="3"]'),
@@ -123,9 +150,11 @@ refs = {
 const animationElHeight = refs.animationEl.offsetHeight;
 const animationElOffest = offset(refs.animationEl).top;
 
-console.log(`Высота элемента - ${animationElHeight}`);
-console.log(`Высота верха до елемента - ${animationElOffest}`);
-console.log(`Высота окна браузера - ${window.innerHeight}`);
+// console.log(
+//   `Для анимации необходимо проскролить: ${
+//     animationElOffest - window.innerHeight + animationElHeight - 1
+//   }`
+// );
 
 function offset(el) {
   const rect = el.getBoundingClientRect(),
@@ -139,7 +168,7 @@ const throttledOnScrollMouse = throttle(onScrollMouse, 1000);
 window.addEventListener('scroll', throttledOnScrollMouse);
 
 function onScrollMouse() {
-  console.log(`Проскролил px - ${scrollY}`);
+  // console.log(`Проскролил px - ${scrollY}`);
   if (
     scrollY <
     animationElOffest - window.innerHeight + animationElHeight - 1

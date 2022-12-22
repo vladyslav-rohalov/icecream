@@ -1,13 +1,30 @@
 .header {
   display: flex;
-  background-color: $solid-bg-color;
   align-items: center;
 
   padding-top: 12px;
 
   @include tablet {
-    padding-top: 20px;
+    padding: 20px 32px 10px 32px;
   }
+
+  @include desktop {
+    padding: 20px 16px;
+  }
+}
+.section__header {
+  background-color: $solid-bg-color;
+
+  @include tablet {
+    position: fixed;
+    width:100%;
+    z-index: 10;
+    
+  &.no-transparency {
+    background-color: rgba(132, 161, 120, 0.5);
+    backdrop-filter: blur(4px);
+  }
+ }
 }
 
 .logo {
@@ -73,15 +90,16 @@
     text-align: center;
     background-color: $btn-default-color;
     border-radius: $btn-border-radius;
-    cursor: pointer;
     border: none;
   }
   &:hover {
     background-color: $btn-hover-bg;
+    animation: shake-top 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
   }
   &:focus {
     background-color: $btn-hover-bg;
     color: $button-light-color;
+    animation: shake-top 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
   }
   &:disabled {
     background-color: $btn-disabled-color;
