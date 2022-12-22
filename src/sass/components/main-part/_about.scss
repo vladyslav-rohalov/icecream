@@ -195,12 +195,12 @@
 
   &:hover {
     background: #0a8817;
-    animation: shake-top 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+    animation: shake-top 0.8s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
   }
   &:focus {
     background: #0a8817;
     color: #fcfcfc;
-    animation: shake-top 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+    animation: shake-top 0.8s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
   }
 }
 
@@ -217,7 +217,6 @@
 
 .about_modal_title {
   margin: 0 auto;
-  margin-top: 28px;
   font-family: $secondary-font;
   font-style: normal;
   font-weight: 400;
@@ -232,7 +231,6 @@
   color: #131313;
 
   @include tablet {
-    margin-top: 32px;
     font-size: 20px;
     line-height: 1.4;
   }
@@ -256,7 +254,6 @@
 .about_modal_text {
   margin: 0 auto;
   margin-top: 20px;
-  margin-bottom: 28px;
   width: 224px;
   font-family: $primary-font;
   font-style: normal;
@@ -268,7 +265,6 @@
 
   @include tablet {
     margin-top: 32px;
-    margin-bottom: 32px;
     width: 448px;
   }
 }
