@@ -1,4 +1,4 @@
-.header_mobile_menu {
+.header__mobile-menu {
   display: flex;
   margin-left: auto;
 }
@@ -62,7 +62,7 @@
   color: #fff;
 }
 
-.mobile-menu {
+.mobile__menu {
   display: block;
   text-align: center;
   padding: 0;
@@ -70,7 +70,7 @@
   margin-top: 140px;
 }
 
-.mobile_list {
+.mobile__list {
 
   @include tablet {
     margin-bottom: 32px;
@@ -85,9 +85,12 @@
   text-decoration: none;
 }
 
-.mobile_link {
+.mobile__link {
   font-weight: 700;
   font-size: 32px;
+  transition: all 0.8s ease 0s;
+  color: #fff;
+
 
   @include tablet {
   font-size: 48px;
