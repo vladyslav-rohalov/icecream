@@ -39,7 +39,7 @@
   }
 }
 
-.header_nav {
+.header__nav {
   display: none;
 
   @include desktop {
@@ -48,13 +48,13 @@
   }
 }
 
-.header_nav-list {
+.header__nav-list {
   &:not(:last-child) {
     margin-right: 28px;
   }
 }
 
-.header_nav-link {
+.header__nav-link {
   font-weight: 700;
   font-size: 16px;
 
@@ -69,7 +69,7 @@
   }
 }
 
-.header_bt {
+.header__bt {
   display: none;
 
   @include tablet {
@@ -122,7 +122,7 @@
   }
 }
 
-.header_bt-menu {
+.header__bt-menu {
     margin: 0 auto;
     margin-top: 110px;
     display: block;
