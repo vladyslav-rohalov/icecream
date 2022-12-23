@@ -26,7 +26,6 @@
   overflow-y: auto;
   transition: all 0.8s ease 0s;
 
-
   /*  Установаем ширину окна  */
   width: 280px;
   @include tablet {
@@ -37,7 +36,7 @@
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -40%);
+  transform: translate(-50%, -50%);
   z-index: 30; /* Должен быть выше чем у подложки*/
 
   /*  Побочные стили   */
@@ -144,24 +143,24 @@
 
   &:nth-child(1) {
     margin-top: 86px;
-    border: 2px solid #96AF8C;
+    border: 2px solid #96af8c;
     filter: drop-shadow(0px 5.26027px 19.726px rgba(212, 20, 67, 0.1));
     border-radius: 15px;
 
     @include tablet {
       margin-top: 0px;
     }
-}
+  }
 
   &:nth-child(2) {
-    background: #EFD478;
-    border: 2px solid #EFD478;
+    background: #efd478;
+    border: 2px solid #efd478;
     box-shadow: 0px 5.26027px 19.726px rgba(212, 20, 67, 0.1);
     border-radius: 15px;
-}
+  }
 
   &:nth-child(3) {
-    border: 2px solid #D6936D;
+    border: 2px solid #d6936d;
     filter: drop-shadow(0px 5.26027px 19.726px rgba(212, 20, 67, 0.1));
     border-radius: 15.7808px;
   }
@@ -187,17 +186,32 @@
   }
 
   &:nth-child(1)::before {
-    background: linear-gradient(0deg, rgba(156, 190, 143, 0.7), rgba(156, 190, 143, 0.7)), #D9D9D9;
+    background: linear-gradient(
+        0deg,
+        rgba(156, 190, 143, 0.7),
+        rgba(156, 190, 143, 0.7)
+      ),
+      #d9d9d9;
     box-shadow: 0px 5.26027px 19.726px rgba(10, 136, 23, 0.25);
   }
 
   &:nth-child(2)::before {
-    background: linear-gradient(0deg, rgba(248, 210, 78, 0.7), rgba(248, 210, 78, 0.7)), #D9D9D9;
+    background: linear-gradient(
+        0deg,
+        rgba(248, 210, 78, 0.7),
+        rgba(248, 210, 78, 0.7)
+      ),
+      #d9d9d9;
     box-shadow: 0px 5.26027px 19.726px rgba(153, 114, 23, 0.25);
   }
 
   &:nth-child(3)::before {
-    background: linear-gradient(0deg, rgba(213, 117, 63, 0.7), rgba(213, 117, 63, 0.7)), #D9D9D9;
+    background: linear-gradient(
+        0deg,
+        rgba(213, 117, 63, 0.7),
+        rgba(213, 117, 63, 0.7)
+      ),
+      #d9d9d9;
     box-shadow: 0px 5.26027px 19.726px rgba(0, 0, 0, 0.25);
   }
 
@@ -241,7 +255,6 @@
     @include retina2x {
       background-image: url(../images/header/modal/img-ice-coffee@2x.jpg);
     }
-
   }
 
   &:nth-child(3)::after {
