@@ -63,7 +63,7 @@ function changeNumberSecond() {
     }
     refs.numberPossSecond.textContent = counterSecond + 'kg';
     counterSecond += 1;
-  }, 217);
+  }, 210);
 }
 
 function changeNumberThird() {
