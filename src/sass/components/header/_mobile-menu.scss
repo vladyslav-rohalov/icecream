@@ -1,6 +1,9 @@
 .header__mobile-menu {
   display: flex;
   margin-left: auto;
+  @include desktop {
+    padding-top: 10px;
+  }
 }
 
 .menu-toggle {
@@ -44,7 +47,7 @@
   width: 100vw;
   height: 100vh;
   padding: 32px;
-  background-color: #97AF8D;
+  background-color: #97af8d;
   z-index: 20;
 
   transform: translateX(100%);
@@ -71,10 +74,9 @@
 }
 
 .mobile__list {
-
   @include tablet {
     margin-bottom: 32px;
-    }
+  }
   margin-bottom: 40px;
 }
 
@@ -91,13 +93,12 @@
   transition: all 0.8s ease 0s;
   color: #fff;
 
-
   @include tablet {
-  font-size: 48px;
+    font-size: 48px;
   }
 
-    &:hover,
-    &:focus {
-      color: $primary-font-color;
-    }
+  &:hover,
+  &:focus {
+    color: $primary-font-color;
+  }
 }
