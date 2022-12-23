@@ -242,26 +242,26 @@
   }
 
   &:nth-child(1)::after {
-    background-image: url(../images/header/modal/img-ice-cream@1x.jpg);
+    background-image: url(../images/header/modal/ice-cream1.png);
 
     @include retina2x {
-      background-image: url(../images/header/modal/img-ice-cream@2x.jpg);
+      background-image: url(../images/header/modal/ice-cream2_2x.png);
     }
   }
 
   &:nth-child(2)::after {
-    background-image: url(../images/header/modal/img-ice-coffee@1x.jpg);
+    background-image: url(../images/header/modal/ice-cream2.png);
 
     @include retina2x {
-      background-image: url(../images/header/modal/img-ice-coffee@2x.jpg);
+      background-image: url(../images/header/modal/ice-cream2_2x.png);
     }
   }
 
   &:nth-child(3)::after {
-    background-image: url(../images/header/modal/img-milkshake@1x.jpg);
+    background-image: url(../images/header/modal/ice-cream3.png);
 
     @include retina2x {
-      background-image: url(../images/header/modal/img-milkshake@2x.jpg);
+      background-image: url(../images/header/modal/ice-cream3_2x.png);
     }
   }
 }
