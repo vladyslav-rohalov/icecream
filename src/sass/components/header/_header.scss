@@ -9,7 +9,8 @@
   }
 
   @include desktop {
-    padding: 20px 16px;
+    padding: 8px 16px;
+    padding-bottom: 20px;
   }
 }
 .section__header {
@@ -17,14 +18,14 @@
 
   @include tablet {
     position: fixed;
-    width:100%;
+    width: 100%;
     z-index: 10;
-    
-  &.no-transparency {
-    background-color: rgba(132, 161, 120, 0.5);
-    backdrop-filter: blur(4px);
+
+    &.no-transparency {
+      background-color: rgba(132, 161, 120, 0.5);
+      backdrop-filter: blur(4px);
+    }
   }
- }
 }
 
 .logo {
@@ -45,6 +46,7 @@
   @include desktop {
     display: flex;
     margin-left: 368px;
+    padding-top: 10px;
   }
 }
 
@@ -65,7 +67,7 @@
 
   &:hover,
   &:focus {
-    color: $accent-color  ;
+    color: $accent-color;
   }
 }
 
@@ -95,12 +97,12 @@
   }
   &:hover {
     background-color: $btn-hover-bg;
-    animation: shake-top 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+    animation: shake-top 0.8s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
   }
   &:focus {
     background-color: $btn-hover-bg;
     color: $button-light-color;
-    animation: shake-top 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+    animation: shake-top 0.8s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
   }
   &:disabled {
     background-color: $btn-disabled-color;
@@ -123,30 +125,30 @@
 }
 
 .header__bt-menu {
-    margin: 0 auto;
-    margin-top: 110px;
-    display: block;
-    gap: 4px;
-    position: relative;
-    min-width: 152px;
-    height: 42px;
-    color: $button-text-color;
-    padding-top: 12px;
-    padding-bottom: 12px;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 1.29;
-    color: $button-text-color;
-    text-align: center;
-    background-color: $btn-default-color;
-    border-radius: $btn-border-radius;
-    cursor: pointer;
-    border: none;
+  margin: 0 auto;
+  margin-top: 110px;
+  display: block;
+  gap: 4px;
+  position: relative;
+  min-width: 152px;
+  height: 42px;
+  color: $button-text-color;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.29;
+  color: $button-text-color;
+  text-align: center;
+  background-color: $btn-default-color;
+  border-radius: $btn-border-radius;
+  cursor: pointer;
+  border: none;
 
-    @include tablet {
-      display: none;
-    }
-  
+  @include tablet {
+    display: none;
+  }
+
   &:hover {
     background-color: $btn-hover-bg;
   }
