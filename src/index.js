@@ -28,6 +28,7 @@
     bodyScrollLock.enableBodyScroll(document.body);
   });
 })();
+
 //Swiper
 //-------------------------------------------------------------------------------------
 import './js/header-scroll';
