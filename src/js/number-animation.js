@@ -25,7 +25,9 @@ function offset(el) {
   return { top: rect.top + scrollTop, left: rect.left + scrollLeft };
 }
 
-export const throttledOnScrollMouse = throttle(onScrollMouse, 500);
+const throttledOnScrollMouse = throttle(onScrollMouse, 500);
+
+export default throttledOnScrollMouse;
 
 window.addEventListener('scroll', throttledOnScrollMouse);
 
