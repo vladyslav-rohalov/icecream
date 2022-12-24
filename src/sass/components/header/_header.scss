@@ -183,3 +183,11 @@
     width: 48px;
   }
 }
+
+.modal__buynow {
+  height: 780px;
+
+  @include tablet {
+    height: 554px;
+  }
+}
